@@ -15,13 +15,16 @@ import torchvision.transforms as transforms
 import copy
 import os
 
+import early_stop_train_val_class as early_stop
+
 import numpy as np
 
 import matplotlib.pyplot as plt
+from datetime import datetime
 
-import early_stop_class
 
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
+
 
 #defining device
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -134,6 +137,13 @@ dropout = float(dropout)
 intfeat = input("Please enter an intermediate feature value (integer):\n")
 intfeat = int(intfeat)
 
+#Defining tolerance and delta for early stop
+tol = input("Enter a number of epochs of patience for early stop")
+delta = input("Enter a delta between train loss and validation loss")
+tol = int(tol)
+delta = float(delta)
+early_stopper_train_Val = early_stop.EarlyStopping_Train_Val(tolerance=tol, min_delta=delta)
+
 #downloading the model 
 model = torch.hub.load('pytorch/vision:v0.10.0', model_down, pretrained=True, force_reload=True)
 
@@ -195,26 +205,14 @@ else:
 scheduler = lr_scheduler.StepLR(optimizer, step_size = step, gamma = gamma)
 #setting numbers of epoch
 #num_epochs = 10
-
-k = input("Insert the top score for results \n")
-k = int(k)
 num_epochs = input("Please enter the number of epochs (integer):\n")
 num_epochs = int(num_epochs) 
 
-pat = input("Insert how many epochs for patience")
-pat = int(pat)
-delta = input("insert a delta")
-delta = float(delta)
-early_stopper = early_stop_class.EarlyStopper(patience=pat, min_delta=delta)
-
-
 summary_loss_train = []  
 summary_acc_train = []   
-summary_acc_train_top = []
 
 summary_loss_val = []    
 summary_acc_val = []
-summary_acc_val_top = []
 
 best_model_wts = copy.deepcopy(model.state_dict())
 best_acc = 0.0
@@ -228,13 +226,27 @@ print(f'Summary:\n \
         Dropout:{dropout},\n \
         optimizer: {optimizer} \n')
 
+
+now = datetime.now()
+now = now.strftime("%Y%m%d%H%M")
+save_path = ("C:\\Users\Quirino\Desktop\Reti\Trained_models\\" +\
+    str(now) + "_" + str(model_down) + "_" +\
+    str(num_epochs) + "epochs_" +\
+    str(batch_size) + "batch_"+\
+    str(lr) + "LR_" +\
+    str(dropout) + "dropout_" +\
+    optim_choose + "optimizer_" +\
+    ".pth")
+
+print(f'Path where the model is saved is: {save_path}')
+# open(save_path, 'a')
+
 #for cycle for training
 for epoch in range(num_epochs):
     
     total_batch = len(train_data)//batch_size
 
     acc_current_train = 0.0
-    acc_current_train_top = 0.0
     cost_current_train = 0.0
 
 
@@ -255,30 +267,15 @@ for epoch in range(num_epochs):
         if (model.aux_logits == False):
           pre = model(X)
           cost = loss(pre, Y)
-          #top5 accuracy
           _, preds = torch.max(pre, 1)
-          _, predstop = torch.topk(pre, k)
-          #transpose the topk matrix because topk vector is a column vector and ground truth vector is a row vector
-          predstop = torch.t(predstop)
-        #   if (Y.data in preds):
-        #     print(f'Predicted max are {preds} and ground truth is {Y.data} \n')
-        #   if (Y.data in predstop):
-        #     print(f'Predicted top{k} are {predstop} and ground truth is {Y.data} \n')
+
         
         #ELSE IF YOU ARE USING aux_logits: in these lines of code pre are the outputs of the model applied to the batch, then pre is converted into a tensor called "output"
         #with wich is calculated the loss function
         else:
           output, pre = model(X)
           cost = loss(output,Y)
-          #top5 accuracy
           _, preds = torch.max(output, 1)
-          _, predstop = torch.topk(output, k)
-          #transpose the topk matrix because topk vector is a column vector and ground truth vector is a row vector
-          predstop = torch.t(predstop)
-        #   if (Y.data in preds):
-        #     print(f'Predicted max are {preds} and ground truth is {Y} \n')
-        #   if (Y.data in predstop):
-        #     print(f'Predicted top{k} are {predstop} and ground truth is {Y} \n')
 
         optimizer.zero_grad()
         cost.backward()
@@ -286,35 +283,24 @@ for epoch in range(num_epochs):
 
         #the next three lines are useful to print accuracy during training 
         acc_current_train += torch.sum(preds == Y.data)
-        # if (Y.data in preds):
-        #     print(acc_current_train)
         epoch_acc = acc_current_train.float() / len(train_data)
-        
-        acc_current_train_top += torch.sum(predstop == Y.data)
-        # if (Y.data in predstop):
-        #     print(acc_current_train_top)
-        epoch_acc_top = acc_current_train_top.float() / len(train_data)
-        
         cost_current_train += cost.item() * batch_images.size(0)
         epoch_loss = cost_current_train / len(train_data)
         #summary_acc_train.append(epoch_acc)
 
         if (i+1) % 5 == 0:
-            print('Epoch [%d/%d], lter [%d/%d] Loss: %.4f, Accuracy_top1 : %.4f %%, Accuracy_top%d : %.4f %%'
-                 %(epoch+1, num_epochs, i+1, total_batch, cost.item(), \
-                  (100 * epoch_acc.item()), k, (100 * epoch_acc_top.item())))
+            print('Epoch [%d/%d], lter [%d/%d] Loss: %.4f, Accuracy:%.4f %%'
+                 %(epoch+1, num_epochs, i+1, total_batch, cost.item(), (100 * epoch_acc.item())))
           
     scheduler.step()
 #evaluating the model
     model.eval()
 
     correct = 0
-    correcttop = 0
     total = 0
     
     loss_current_val = 0.0
     acc_current_val = 0.0
-    acc_current_val_top = 0.0
     
     total_batch_val = len(test_data)//batch_size
 
@@ -328,88 +314,59 @@ for epoch in range(num_epochs):
     #   images = images.cuda()
         outputs = model(images)
         
-        #top5 accuracy
         _, predicted = torch.max(outputs.data, 1)
-        _, predictedtop = torch.topk(outputs.data, k)
-        predictedtop = torch.t(predictedtop)
-        
-        # if (labels.data in predicted):
-        #     print(f'Predicted max is {predicted} and ground truth is {labels} \n')
-        
-        # if (labels.data in predictedtop):
-        #     print(f'Top{k} predicted is: {predictedtop} and ground truth is {labels} \n')
         
         total += labels.size(0)
         correct += (predicted == labels.cuda()).sum()
-        correcttop += torch.sum(predictedtop == labels)
-        
-        # print(f'Correct max is {predicted} and ground truth is {labels} \n')
-        # print(f'Correct top5 is {predictedtop} and ground truth is {labels} \n')
         
         val_cost = loss(outputs, labels)
         
         loss_current_val += val_cost.item() * images.size(0)
         val_epoch_loss = loss_current_val / len(test_data)
-        
         acc_current_val += torch.sum(predicted == labels.data)
         val_epoch_acc = acc_current_val.float() / len(test_data)
 
-        acc_current_val_top += torch.sum(predictedtop == labels.data)
-        val_epoch_acc_top = acc_current_val_top.float() / len(test_data)
-
         if (j+1) % 5 == 0:
           # print('Accuracy of test images with %f epochs and %f: %f %%' % (100 * float(correct) / total))
-          print(f'Epoch: {epoch+1}, batch {batch_size}, learning rate {lr}, iter: [{j+1}/{total_batch_val}]: Accuracy: top1: %f %%, top{k}: %f %%' \
-            %((100 * float(correct) / total), (100 * float(correcttop / total))))
-
+          print(f'Epoch: {epoch+1}, batch {batch_size}, learning rate {lr}, Loss:{val_cost.item()}, iter: [{j+1}/{total_batch_val}]: %f %%' %(100 * float(correct) / total))
+    
     #Plot
 
     summary_loss_train.append(epoch_loss)
-    summary_acc_train.append(epoch_acc)
-    summary_acc_train_top.append(epoch_acc_top)
-    
+    summary_acc_train.append(epoch_acc)  
     summary_loss_val.append(val_epoch_loss)
     summary_acc_val.append(val_epoch_acc)
-    summary_acc_val_top.append(val_epoch_acc_top)
 
 
     if val_epoch_acc > best_acc:
          best_acc = val_epoch_acc
          best_model_wts = copy.deepcopy(model.state_dict())
          #summary_acc_train.append(epoch_acc)
-
-
-    if early_stopper.early_stop(val_epoch_loss):
-        print("We are at epoch:", epoch+1)
-        break   
+    
+    early_stopper_train_Val(epoch_loss, val_epoch_loss)
+    if early_stopper_train_Val.early_stop:
+      print("We are at epoch:", epoch+1)
+      break
     else:
         print(f"We have not yet achieved early stop value,\
-            min_val_loss is {early_stopper.min_validation_loss}, \
-            val_loss is {val_epoch_loss}")
-        
+            train_loss is {epoch_loss}, \
+            val_loss is {val_epoch_loss}, \
+            so their difference is {val_epoch_loss - epoch_loss}")
 
+        
     # print('Accuracy of test images with %f epochs and %f: %f %%' % (100 * float(correct) / total))
     #print(f'{num_epochs} epochs, batch {batch_size}, learning rate 0.001: %f %%' %(100 * float(correct) / total))
 
 print(f'Summary: Neural Network:{model_down},\n \
     epochs:{num_epochs},batch:{batch_size}, learning rate: {lr}, Intermediate features: {intfeat}, Dropout:{dropout},\n \
     optimizer: {optimizer} \n \
-    Training: Total batch: [{total_batch}], Loss:{epoch_loss}, Accuracy: top1: {100 * epoch_acc}%, top{k}: {100 * epoch_acc_top}% \n \
-    Validation: batch size:[{total_batch_val}], Loss: {val_epoch_loss}, Accuracy: top1: {100 * val_epoch_acc}%, top{k}: {100 * val_epoch_acc_top}%')
+    Training: Total batch: [{total_batch}], Loss:{epoch_loss}, Accuracy: {100 * epoch_acc}%, \n \
+    Validation: batch size:[{total_batch_val}], Loss: {val_epoch_loss}, Accuracy: {100 * val_epoch_acc}%')
 
-train_data = (f'Summary: Neural Network:{model_down},\n \
-    epochs:{num_epochs},batch:{batch_size}, learning rate: {lr}, Intermediate features: {intfeat}, Dropout:{dropout},\n \
-    optimizer: {optimizer} \n \
-    Training: Total batch: [{total_batch}], Loss:{epoch_loss}, Accuracy: top1: {100 * epoch_acc}%, top{k}: {100 * epoch_acc_top}% \n \
-    Validation: batch size:[{total_batch_val}], Loss: {val_epoch_loss}, Accuracy: {100 * val_epoch_acc}%, top{k}: {100 * val_epoch_acc_top}%')
-
-train_file = open('train_data_file.txt', 'a')
-train_file.write(train_data + "\n")
-
-# print(f'Summary loss train: {summary_loss_train}')
-# print(f'Summary loss train shape: {np.shape(summary_loss_train)}')
-# print(f'Summary loss val: {summary_loss_train}')
-# print(f'Summary loss val shape: {np.shape(summary_loss_val)}')
+print(f'Summary loss train: {summary_loss_train}')
+print(f'Summary loss train shape: {np.shape(summary_loss_train)}')
+print(f'Summary loss val: {summary_loss_train}')
+print(f'Summary loss val shape: {np.shape(summary_loss_val)}')
 # summary_acc_train_cpu = summary_acc_train.cpu()
 #print(f'Summary acc train shape: {np.shape(summary_acc_train.cpu())}')
 
@@ -419,23 +376,17 @@ for idx in range(len(summary_acc_train)):
     #print(sommario_acc_train_array[idx])
 print(f'Sommario acc train array shape: {np.shape(sommario_acc_train_array)}')
 
-sommario_acc_train_top_array = []
-for idx in range(len(summary_acc_train_top)):
-    sommario_acc_train_top_array.append(summary_acc_train_top[idx].cpu().clone().detach().numpy())
-    #print(sommario_acc_train_array[idx])
-print(f'Sommario acc train top array shape: {np.shape(sommario_acc_train_top_array)}')
 
 sommario_acc_val_array = []
 for idx in range(len(summary_acc_val)):
     sommario_acc_val_array.append(summary_acc_val[idx].cpu().clone().detach().numpy())
-    #print(sommario_acc_val_array[idx])
+    print(sommario_acc_val_array[idx])
 print(f'Sommario acc val array shape: {np.shape(sommario_acc_val_array)}')
 
-sommario_acc_val_top_array = []
-for idx in range(len(summary_acc_val_top)):
-    sommario_acc_val_top_array.append(summary_acc_val_top[idx].cpu().clone().detach().numpy())
-    # print(sommario_acc_val_array[idx])
-print(f'Sommario acc val top array shape: {np.shape(sommario_acc_val_top_array)}')
+
+#Saving the model
+torch.save(model, save_path)
+
 
 #Plot
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize = (15,6))
@@ -451,32 +402,16 @@ ax1.legend()
 sommario_acc_train_array = []
 for idx in range(len(summary_acc_train)):
     sommario_acc_train_array.append(summary_acc_train[idx].cpu().clone().detach().numpy())
-    #print(sommario_acc_train_array[idx])
-# print(f'Sommario acc train array shape: {np.shape(sommario_acc_train_array)}')
-
-sommario_acc_train_top_array = []
-for idx in range(len(summary_acc_train_top)):
-    sommario_acc_train_top_array.append(summary_acc_train_top[idx].cpu().clone().detach().numpy())
-    #print(sommario_acc_train_array[idx])
-# print(f'Sommario acc train top array shape: {np.shape(sommario_acc_train_top_array)}')
+print(f'Sommario acc train array: {np.shape(sommario_acc_train_array)}')
 
 sommario_acc_val_array = []
 for idx in range(len(summary_acc_val)):
     sommario_acc_val_array.append(summary_acc_val[idx].cpu().clone().detach().numpy())
-    #print(sommario_acc_val_array[idx])
-# print(f'Sommario acc val array shape: {np.shape(sommario_acc_val_array)}')
-
-sommario_acc_val_top_array = []
-for idx in range(len(summary_acc_val_top)):
-    sommario_acc_val_top_array.append(summary_acc_val_top[idx].cpu().clone().detach().numpy())
-    # print(sommario_acc_val_array[idx])
-# print(f'Sommario acc val top array shape: {np.shape(sommario_acc_val_top_array)}')
+print(f'Sommario acc val array: {np.shape(sommario_acc_val_array)}')
 
 ax2.set_title("Accuracy")
 ax2.plot(x, sommario_acc_train_array, label='Training Accuracy')
 ax2.plot(x, sommario_acc_val_array, label='Validation Accuracy')
-ax2.plot(x, sommario_acc_train_top_array, label = 'Training top5 Accuracy')
-ax2.plot(x, sommario_acc_val_top_array, label = 'Validation top5 Accuracy')
 ax2.legend()
 
 plt.show()
