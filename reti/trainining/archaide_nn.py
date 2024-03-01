@@ -205,19 +205,21 @@ num_epochs = input("Please enter the number of epochs (integer):\n")
 num_epochs = int(num_epochs) 
 
 #set patience and delta for early stop
-pat = input("Insert how many epochs for patience")
+pat = input("Insert how many epochs for patience \n")
 pat = int(pat)
-delta = input("insert a delta")
+delta = input("Insert a delta \n")
 delta = float(delta)
 
 #choose if you want early_stop with train_val comparison or only on val
-early_choose = input("Do you want to use early stop with comparison on [T]rain-Val loss comparison or only on[V]al loss? \n")
+early_choose = input("Do you want to use early stop with comparison on [T]rain-Val loss comparison or only on[V]al loss or [N]one? \n")
 if early_choose == "T":
     early_stopper_train_val = early_stop_train_val.EarlyStopping_Train_Val(tolerance=pat, min_delta=delta)
 elif early_choose == "V":
     early_stopper_val = early_stop_val.EarlyStopper(patience=pat, min_delta=delta)
+else:
+    pass
 
-save = input("Do you want to save the model?y/N")
+save = input("Do you want to save the model?y/N \n")
 
 
 summary_loss_train = []  
@@ -371,8 +373,10 @@ for epoch in range(num_epochs):
 
         if (j+1) % 5 == 0:
           # print('Accuracy of test images with %f epochs and %f: %f %%' % (100 * float(correct) / total))
-          print(f'Epoch: {epoch+1}, batch {batch_size}, learning rate {lr}, iter: [{j+1}/{total_batch_val}]: Accuracy: top1: %f %%, top{k}: %f %%' \
-            %((100 * float(correct) / total), (100 * float(correcttop / total))))
+          print(f'Epoch: {epoch+1}, batch {batch_size}, learning rate {lr}, iter: [{j+1}/{total_batch_val}]:\
+            Loss: %.4f\
+            Accuracy: top1: %f %%, top{k}: %f %%' \
+            %(val_cost.item(), (100 * float(correct) / total), (100 * float(correcttop / total))))
 
     #Plot
 
@@ -390,15 +394,16 @@ for epoch in range(num_epochs):
          best_model_wts = copy.deepcopy(model.state_dict())
          #summary_acc_train.append(epoch_acc)
     
-    if early_stopper_val in globals():
+    # if early_stopper_val in globals():
+    if early_choose == "V":
         if early_stopper_val.early_stop(val_epoch_loss):
-            print(f"We are at epoch: {epoch+1}, min loss achieved is {val_epoch_loss}")
+            print(f"We are at epoch: {epoch+1}, min loss achieved is {early_stopper_val.min_validation_loss}")
             break   
         else:
             print(f"We have not yet achieved early_stop_val value,\
                 min_val_loss is {early_stopper_val.min_validation_loss}, \
                 val_loss is {val_epoch_loss}")
-    else:   
+    elif early_choose == "T":   
         early_stopper_train_val(epoch_loss, val_epoch_loss)
         if early_stopper_train_val.early_stop:
             print(f"We are at epoch: {epoch+1},\n \
@@ -409,22 +414,26 @@ for epoch in range(num_epochs):
                 train_loss is {epoch_loss},\n \
                 val_loss is {val_epoch_loss},\n \
                 so their difference is {val_epoch_loss - epoch_loss}")
+    else:
+        pass
         
 
     # print('Accuracy of test images with %f epochs and %f: %f %%' % (100 * float(correct) / total))
     #print(f'{num_epochs} epochs, batch {batch_size}, learning rate 0.001: %f %%' %(100 * float(correct) / total))
 
 print(f'Summary: Neural Network:{model_down},\n \
-    epochs:{num_epochs},batch:{batch_size}, learning rate: {lr}, Intermediate features: {intfeat}, Dropout:{dropout},\n \
+    epochs:{epoch+1},batch:{batch_size}, learning rate: {lr}, Intermediate features: {intfeat}, Dropout:{dropout},\n \
     optimizer: {optimizer} \n \
     Training: Total batch: [{total_batch}], Loss:{epoch_loss}, Accuracy: top1: {100 * epoch_acc}%, top{k}: {100 * epoch_acc_top}% \n \
     Validation: batch size:[{total_batch_val}], Loss: {val_epoch_loss}, Accuracy: top1: {100 * val_epoch_acc}%, top{k}: {100 * val_epoch_acc_top}%')
 
 train_data = (f'Summary: Neural Network:{model_down},\n \
-    epochs:{num_epochs},batch:{batch_size}, learning rate: {lr}, Intermediate features: {intfeat}, Dropout:{dropout},\n \
+    epochs:{epoch+1},batch:{batch_size}, learning rate: {lr}, Intermediate features: {intfeat}, Dropout:{dropout},\n \
     optimizer: {optimizer} \n \
     Training: Total batch: [{total_batch}], Loss:{epoch_loss}, Accuracy: top1: {100 * epoch_acc}%, top{k}: {100 * epoch_acc_top}% \n \
     Validation: batch size:[{total_batch_val}], Loss: {val_epoch_loss}, Accuracy: {100 * val_epoch_acc}%, top{k}: {100 * val_epoch_acc_top}%')
+
+print(train_data)
 
 train_file = open('train_data_file.txt', 'a')
 train_file.write(train_data + "\n")
@@ -465,6 +474,7 @@ if save == "y":
     now = now.strftime("%Y%m%d%H%M")
     save_path = ("C:\\Users\Quirino\Desktop\Reti\Trained_models\\" +\
         str(now) + "_" + str(model_down) + "_" +\
+        str(epoch+1) + "epochs_on_" +\
         str(num_epochs) + "epochs_" +\
         str(batch_size) + "batch_"+\
         str(lr) + "LR_" +\
@@ -479,9 +489,9 @@ if save == "y":
 
 #Plot
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize = (15,6))
-fig.suptitle(f'Model:{model_down}, Intermediate features: {intfeat}, Dropout:{dropout} Epochs: {num_epochs}, optimizer: {optim_choose} with momentum:{momentum} and gamma: {gamma}, \n Loss function:{loss}, learning rate:{lr}')
+fig.suptitle(f'Model:{model_down}, Intermediate features: {intfeat}, Dropout:{dropout} Epochs: {epoch+1}, optimizer: {optim_choose} with momentum:{momentum} and gamma: {gamma}, \n Loss function:{loss}, learning rate:{lr}')
 
-x = [i for i in range(num_epochs)]
+x = [i for i in range(epoch+1)]
 #print(x)
 ax1.set_title("Loss")
 ax1.plot(x, summary_loss_train,  label = 'Training Loss')
