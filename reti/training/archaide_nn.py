@@ -219,7 +219,7 @@ elif early_choose == "V":
 else:
     pass
 
-save = input("Do you want to save the model?y/N \n")
+save = input("Do you want to save the model at the end of training (model is saved every 10 epochs)?y/N \n")
 
 
 summary_loss_train = []  
@@ -372,11 +372,28 @@ for epoch in range(num_epochs):
         val_epoch_acc_top = acc_current_val_top.float() / len(test_data)
 
         if (j+1) % 5 == 0:
-          # print('Accuracy of test images with %f epochs and %f: %f %%' % (100 * float(correct) / total))
-          print(f'Epoch: {epoch+1}, batch {batch_size}, learning rate {lr}, iter: [{j+1}/{total_batch_val}]:\
-            Loss: %.4f\
-            Accuracy: top1: %f %%, top{k}: %f %%' \
-            %(val_cost.item(), (100 * float(correct) / total), (100 * float(correcttop / total))))
+            # print('Accuracy of test images with %f epochs and %f: %f %%' % (100 * float(correct) / total))
+            print(f'Epoch: {epoch+1}, batch {batch_size}, learning rate {lr}, iter: [{j+1}/{total_batch_val}]:\
+                Loss: %.4f\
+                Accuracy: top1: %f %%, top{k}: %f %%' \
+                %(val_cost.item(), (100 * float(correct) / total), (100 * float(correcttop / total))))
+
+        if (epoch+1) % 10 == 0:
+            now = datetime.now()
+            now = now.strftime("%Y%m%d%H%M")
+            save_path = ("C:\\Users\Quirino\Desktop\Reti\Trained_models\\" +\
+                str(now) + "_" + str(model_down) + "_" +\
+                str(epoch+1) + "epochs_on_" +\
+                str(num_epochs) + "epochs_" +\
+                str(batch_size) + "batch_"+\
+                str(lr) + "LR_" +\
+                str(dropout) + "dropout_" +\
+                optim_choose + "optimizer_" +\
+                ".pth")
+            
+            #Saving the model
+            torch.save(model, save_path)
+
 
     #Plot
 
@@ -397,23 +414,27 @@ for epoch in range(num_epochs):
     # if early_stopper_val in globals():
     if early_choose == "V":
         if early_stopper_val.early_stop(val_epoch_loss):
-            print(f"We are at epoch: {epoch+1}, min loss achieved is {early_stopper_val.min_validation_loss}")
+            print(f"We are at epoch: {epoch+1}, min loss achieved is {early_stopper_val.min_validation_loss} \
+                with patience = {pat} and delta = {delta}")
             break   
         else:
             print(f"We have not yet achieved early_stop_val value,\
                 min_val_loss is {early_stopper_val.min_validation_loss}, \
-                val_loss is {val_epoch_loss}")
+                val_loss is {val_epoch_loss} \
+                with patience = {pat} and delta = {delta}")
     elif early_choose == "T":   
         early_stopper_train_val(epoch_loss, val_epoch_loss)
         if early_stopper_train_val.early_stop:
             print(f"We are at epoch: {epoch+1},\n \
-                   difference between train and val loss is {val_epoch_loss - epoch_loss}")
+                   difference between train and val loss is {val_epoch_loss - epoch_loss} \
+                   with patience = {pat} and delta = {delta}")
             break
         else:
             print(f"We have not yet achieved early stop value,\n \
                 train_loss is {epoch_loss},\n \
                 val_loss is {val_epoch_loss},\n \
-                so their difference is {val_epoch_loss - epoch_loss}")
+                so their difference is {val_epoch_loss - epoch_loss} \
+                with patience = {pat} and delta = {delta}")
     else:
         pass
         
@@ -435,8 +456,10 @@ train_data = (f'Summary: Neural Network:{model_down},\n \
 
 print(train_data)
 
-train_file = open('train_data_file.txt', 'a')
-train_file.write(train_data + "\n")
+with open('train_data_file_auto.txt', 'a+') as train_file:
+# train_file = open('train_data_file_auto.txt', 'a')
+    train_file.write(train_data + "\n")
+    train_file.close()
 
 # print(f'Summary loss train: {summary_loss_train}')
 # print(f'Summary loss train shape: {np.shape(summary_loss_train)}')
