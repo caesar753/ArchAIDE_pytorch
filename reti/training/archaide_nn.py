@@ -31,6 +31,10 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 device
 print(device)
 
+##ELISA
+torch.cuda.empty_cache() #to empty cuda cache
+print(torch.cuda.memory_summary(device=None, abbreviated=False)) #memory summary
+
 #choosing model 
 model_down = input("Which model?")
 
@@ -97,6 +101,7 @@ train_loader = DataLoader(train_data,
 test_loader = DataLoader(test_data, 
                          batch_size=batch_size,
                          shuffle=True)
+# batch_size_real = 8
 
 dataset_len = len(train_data)
 print('dataset:', train_data)
@@ -272,7 +277,8 @@ for epoch in range(num_epochs):
           #top5 accuracy
           _, preds = torch.max(pre, 1)
           _, predstop = torch.topk(pre, k)
-          #transpose the topk matrix because topk vector is a column vector and ground truth vector is a row vector
+          #transpose the topk matrix because topk vector is a column vector and 
+          # ground truth vector is a row vector
           predstop = torch.t(predstop)
         #   if (Y.data in preds):
         #     print(f'Predicted max are {preds} and ground truth is {Y.data} \n')
@@ -378,21 +384,23 @@ for epoch in range(num_epochs):
                 Accuracy: top1: %f %%, top{k}: %f %%' \
                 %(val_cost.item(), (100 * float(correct) / total), (100 * float(correcttop / total))))
 
-        if (epoch+1) % 10 == 0:
-            now = datetime.now()
-            now = now.strftime("%Y%m%d%H%M")
-            save_path = ("C:\\Users\Quirino\Desktop\Reti\Trained_models\\" +\
-                str(now) + "_" + str(model_down) + "_" +\
-                str(epoch+1) + "epochs_on_" +\
-                str(num_epochs) + "epochs_" +\
-                str(batch_size) + "batch_"+\
-                str(lr) + "LR_" +\
-                str(dropout) + "dropout_" +\
-                optim_choose + "optimizer_" +\
-                ".pth")
-            
-            #Saving the model
-            torch.save(model, save_path)
+    if (epoch+1) % 10 == 0:
+        now = datetime.now()
+        now = now.strftime("%Y%m%d%H%M")
+        save_path = ("C:\\Users\Quirino\Desktop\Reti\Trained_models\\" +\
+            str(now) + "_" + str(model_down) + "_" +\
+            str(epoch+1) + "epochs_on_" +\
+            str(num_epochs) + "epochs_" +\
+            str(batch_size) + "batch_"+\
+            str(lr) + "LR_" +\
+            str(dropout) + "dropout_" +\
+            optim_choose + "optimizer_" +\
+            val_epoch_acc + "_accuracy_top1_"+\
+            val_epoch_acc_top + "_accuracy_top5"+\
+            ".pth")
+        
+        #Saving the model
+        torch.save(model, save_path)
 
 
     #Plot
