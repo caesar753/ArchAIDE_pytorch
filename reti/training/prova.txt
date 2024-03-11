@@ -1,0 +1,12 @@
+sad1wedscqwdqwcEpoch [1/10], lter [5/1385] Loss: 4.2050, Accuracy_top1 : 0.0000 %, Accuracy_top5 : 0.0289 %
+Epoch [1/10], lter [10/1385] Loss: 4.1664, Accuracy_top1 : 0.0000 %, Accuracy_top5 : 0.0722 %
+Epoch [1/10], lter [15/1385] Loss: 3.6170, Accuracy_top1 : 0.0433 %, Accuracy_top5 : 0.1732 %
+Epoch [1/10], lter [20/1385] Loss: 4.2380, Accuracy_top1 : 0.0433 %, Accuracy_top5 : 0.2165 %
+Epoch [1/10], lter [25/1385] Loss: 3.8103, Accuracy_top1 : 0.0866 %, Accuracy_top5 : 0.2887 %
+Epoch [1/10], lter [30/1385] Loss: 3.7800, Accuracy_top1 : 0.0866 %, Accuracy_top5 : 0.3320 %
+Epoch [1/10], lter [35/1385] Loss: 4.1089, Accuracy_top1 : 0.0866 %, Accuracy_top5 : 0.3753 %
+Epoch [1/10], lter [40/1385] Loss: 4.0685, Accuracy_top1 : 0.0866 %, Accuracy_top5 : 0.4042 %
+Epoch [1/10], lter [45/1385] Loss: 3.3444, Accuracy_top1 : 0.1010 %, Accuracy_top5 : 0.4619 %
+Epoch [1/10], lter [50/1385] Loss: 4.0287, Accuracy_top1 : 0.1010 %, Accuracy_top5 : 0.5196 %
+Epoch [1/10], lter [55/1385] Loss: 3.8252, Accuracy_top1 : 0.1155 %, Accuracy_top5 : 0.5629 %
+Epoch [1/10], lter [60/1385] Loss: 4.4611, Accuracy_top1 : 0.1443 %, Accuracy_top5 : 0.6062 %

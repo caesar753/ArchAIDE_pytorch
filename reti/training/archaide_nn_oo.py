@@ -55,6 +55,90 @@ def imshow(img, title):
     plt.axis('off')
     plt.show()
 
+def graph_plot(model, intermediate, drop, epoch, optimizer, momentum, gamma, loss, lr, top, \
+    summary_loss_train, summary_loss_val,\
+    summary_acc_train, summary_acc_train_top,\
+    summary_acc_val, summary_acc_val_top\
+        ):
+    #Plot
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize = (15,6))
+    fig.suptitle(f'Model:{model}, Intermediate features: {intermediate}, Dropout:{drop} Epochs: {epoch+1}, optimizer: {optimizer} with momentum:{momentum}and gamma: {gamma}, \n Loss function:{loss}, learning rate:{lr}')
+
+    x = [i for i in range(epoch+1)]
+    #print(x)
+    ax1.set_title("Loss")
+    ax1.plot(x, summary_loss_train,  label = 'Training Loss')
+    ax1.plot(x, summary_loss_val, label = 'Validation Loss')
+    ax1.legend()
+
+    sommario_acc_train_array = []
+    for idx in range(len(summary_acc_train)):
+        sommario_acc_train_array.append(summary_acc_train[idx].cpu().clone().detach().numpy())
+        #print(sommario_acc_train_array[idx])
+    # print(f'Sommario acc train array shape: {np.shape(sommario_acc_train_array)}')
+
+    sommario_acc_train_top_array = []
+    for idx in range(len(summary_acc_train_top)):
+        sommario_acc_train_top_array.append(summary_acc_train_top[idx].cpu().clone().detach().numpy())
+        #print(sommario_acc_train_array[idx])
+    # print(f'Sommario acc train top array shape: {np.shape(sommario_acc_train_top_array)}')
+
+    sommario_acc_val_array = []
+    for idx in range(len(summary_acc_val)):
+        sommario_acc_val_array.append(summary_acc_val[idx].cpu().clone().detach().numpy())
+        #print(sommario_acc_val_array[idx])
+    # print(f'Sommario acc val array shape: {np.shape(sommario_acc_val_array)}')
+
+    sommario_acc_val_top_array = []
+    for idx in range(len(summary_acc_val_top)):
+        sommario_acc_val_top_array.append(summary_acc_val_top[idx].cpu().clone().detach().numpy())
+        # print(sommario_acc_val_array[idx])
+    # print(f'Sommario acc val top array shape: {np.shape(sommario_acc_val_top_array)}')
+
+    ax2.set_title("Accuracy")
+    ax2.plot(x, sommario_acc_train_array, label='Training Accuracy')
+    ax2.plot(x, sommario_acc_val_array, label='Validation Accuracy')
+    ax2.plot(x, sommario_acc_train_top_array, label = 'Training top5 Accuracy')
+    ax2.plot(x, sommario_acc_val_top_array, label = 'Validation top5 Accuracy')
+    ax2.legend()
+
+    now = datetime.now()
+    now = now.strftime("%Y%m%d%H%M")
+
+    save_fig_path = ('F:\\ArchAIDE_nn\Archapp_pytorch\Python\ArchAIDE_pytorch\Data\\202403\Prove_to_do_list\Auto_fig\\'+\
+        str(now) + "_" + str(model) + "_" +\
+        optimizer + "_optimizer_" +\
+        str(epoch+1) + "_epochs_" +\
+        str(lr) + "LR_" +\
+        "top_" + str(top)+ "_" +\
+        str(drop) + "dropout" +\
+        ".png")
+
+    fig.savefig(save_fig_path)
+    plt.close(fig)
+
+    # return plt
+
+def save_model(model, model_trained, drop, epoch, num_epochs, batch, optimizer, learning_rate,\
+    val_epoch_acc, val_epoch_acc_top):
+    now = datetime.now()
+    now = now.strftime("%Y%m%d%H%M")
+    
+    save_path = ("F:\ArchAIDE_nn\Archapp_pytorch\Trained_models\\" +\
+        str(now) + "_" + str(model) + "_" +\
+        str(epoch+1) + "epochs_on_" +\
+        str(num_epochs) + "epochs_" +\
+        str(batch) + "batch_"+\
+        str(learning_rate) + "LR_" +\
+        str(drop) + "dropout_" +\
+        optimizer + "optimizer_" +\
+        str(round(val_epoch_acc.item(),3)) + "_accuracy_top1_"+\
+        str(round(val_epoch_acc_top.item(),3)) + "_accuracy_top"+ str(k) +\
+        ".pth")
+
+    #Saving the model
+    torch.save(model_trained, save_path)
+
 
 
 if __name__ == '__main__':
@@ -140,7 +224,6 @@ if __name__ == '__main__':
     #function that show images associated to labels
     imshow(images, [train_data.classes[i] for i in labels])
 
-
     #defining dropout
     #dropout = 0.10
     dropout = input("Please enter a dropout value (float from 0 to 1):\n")
@@ -218,14 +301,15 @@ if __name__ == '__main__':
     num_epochs = input("Please enter the number of epochs (integer):\n")
     num_epochs = int(num_epochs) 
 
-    #set patience and delta for early stop
-    pat = input("Insert how many epochs for patience \n")
-    pat = int(pat)
-    delta = input("Insert a delta \n")
-    delta = float(delta)
-
     #choose if you want early_stop with train_val comparison or only on val
     early_choose = input("Do you want to use early stop with comparison on [T]rain-Val loss comparison or only on[V]al loss or [N]one? \n")
+    #set patience and delta for early stop
+    if early_choose == "T" or early_choose == "V":
+        pat = input("Insert how many epochs for patience \n")
+        pat = int(pat)
+        delta = input("Insert a delta \n")
+        delta = float(delta)
+
     if early_choose == "T":
         early_stopper_train_val = early_stop_train_val.EarlyStopping_Train_Val(tolerance=pat, min_delta=delta)
     elif early_choose == "V":
@@ -391,23 +475,6 @@ if __name__ == '__main__':
                     Accuracy: top1: %f %%, top{k}: %f %%' \
                     %(val_cost.item(), (100 * float(correct) / total), (100 * float(correcttop / total))))
 
-        if (epoch+1) % 10 == 0:
-            now = datetime.now()
-            now = now.strftime("%Y%m%d%H%M")
-            save_path = ("C:\\Users\Quirino\Desktop\Reti\Trained_models\\" +\
-                str(now) + "_" + str(model_down) + "_" +\
-                str(epoch+1) + "epochs_on_" +\
-                str(num_epochs) + "epochs_" +\
-                str(batch_size) + "batch_"+\
-                str(lr) + "LR_" +\
-                str(dropout) + "dropout_" +\
-                optim_choose + "optimizer_" +\
-                ".pth")
-            
-            #Saving the model
-            torch.save(model, save_path)
-
-
         #Plot
 
         summary_loss_train.append(epoch_loss)
@@ -418,6 +485,24 @@ if __name__ == '__main__':
         summary_acc_val.append(val_epoch_acc)
         summary_acc_val_top.append(val_epoch_acc_top)
 
+        if (epoch+1) % 10 == 0:
+            summary_10 = (f'Summary: Neural Network:{model_down}, \
+                epochs:{epoch+1},batch:{batch_size}, learning rate: {lr}, Intermediate features: {intfeat}, Dropout:{dropout},\n \
+                optimizer: {optimizer} \n \
+                Training: Total batch: [{total_batch}], Loss:{epoch_loss}, Accuracy: top1: {100 * epoch_acc}%, top{k}: {100 * epoch_acc_top}% \n \
+                Validation: batch size:[{total_batch_val}], Loss: {val_epoch_loss}, Accuracy: {100 * val_epoch_acc}%, top{k}: {100 * val_epoch_acc_top}%')
+
+            with open("F:\ArchAIDE_nn\Archapp_pytorch\python\ArchAIDE_pytorch\Reti\Training\Train_data_file_auto.txt", "a+") as train_file:
+                train_file.write(summary_10 + "\n \n")
+                train_file.close()            
+            
+            save_model(model_down, model, dropout, epoch+1, num_epochs, batch_size, optim_choose, lr, \
+                val_epoch_acc, val_epoch_acc_top)
+
+            graph_plot(model_down, intfeat, dropout, epoch, optim_choose, momentum, gamma, loss, lr, k,\
+                summary_loss_train, summary_loss_val,\
+                summary_acc_train, summary_acc_train_top,
+                summary_acc_val, summary_acc_val_top)
 
         if val_epoch_acc > best_acc:
             best_acc = val_epoch_acc
@@ -451,16 +536,6 @@ if __name__ == '__main__':
         else:
             pass
             
-
-        # print('Accuracy of test images with %f epochs and %f: %f %%' % (100 * float(correct) / total))
-        #print(f'{num_epochs} epochs, batch {batch_size}, learning rate 0.001: %f %%' %(100 * float(correct) / total))
-
-    print(f'Summary: Neural Network:{model_down},\n \
-        epochs:{epoch+1},batch:{batch_size}, learning rate: {lr}, Intermediate features: {intfeat}, Dropout:{dropout},\n \
-        optimizer: {optimizer} \n \
-        Training: Total batch: [{total_batch}], Loss:{epoch_loss}, Accuracy: top1: {100 * epoch_acc}%, top{k}: {100 * epoch_acc_top}% \n \
-        Validation: batch size:[{total_batch_val}], Loss: {val_epoch_loss}, Accuracy: top1: {100 * val_epoch_acc}%, top{k}: {100 * val_epoch_acc_top}%')
-
     train_data = (f'Summary: Neural Network:{model_down},\n \
         epochs:{epoch+1},batch:{batch_size}, learning rate: {lr}, Intermediate features: {intfeat}, Dropout:{dropout},\n \
         optimizer: {optimizer} \n \
@@ -474,95 +549,11 @@ if __name__ == '__main__':
         train_file.write(train_data + "\n")
         train_file.close()
 
-    # print(f'Summary loss train: {summary_loss_train}')
-    # print(f'Summary loss train shape: {np.shape(summary_loss_train)}')
-    # print(f'Summary loss val: {summary_loss_train}')
-    # print(f'Summary loss val shape: {np.shape(summary_loss_val)}')
-    # summary_acc_train_cpu = summary_acc_train.cpu()
-    #print(f'Summary acc train shape: {np.shape(summary_acc_train.cpu())}')
-
-    sommario_acc_train_array = []
-    for idx in range(len(summary_acc_train)):
-        sommario_acc_train_array.append(summary_acc_train[idx].cpu().clone().detach().numpy())
-        #print(sommario_acc_train_array[idx])
-    print(f'Sommario acc train array shape: {np.shape(sommario_acc_train_array)}')
-
-    sommario_acc_train_top_array = []
-    for idx in range(len(summary_acc_train_top)):
-        sommario_acc_train_top_array.append(summary_acc_train_top[idx].cpu().clone().detach().numpy())
-        #print(sommario_acc_train_array[idx])
-    print(f'Sommario acc train top array shape: {np.shape(sommario_acc_train_top_array)}')
-
-    sommario_acc_val_array = []
-    for idx in range(len(summary_acc_val)):
-        sommario_acc_val_array.append(summary_acc_val[idx].cpu().clone().detach().numpy())
-        #print(sommario_acc_val_array[idx])
-    print(f'Sommario acc val array shape: {np.shape(sommario_acc_val_array)}')
-
-    sommario_acc_val_top_array = []
-    for idx in range(len(summary_acc_val_top)):
-        sommario_acc_val_top_array.append(summary_acc_val_top[idx].cpu().clone().detach().numpy())
-        # print(sommario_acc_val_array[idx])
-    print(f'Sommario acc val top array shape: {np.shape(sommario_acc_val_top_array)}')
-
     if save == "y":
-        now = datetime.now()
-        now = now.strftime("%Y%m%d%H%M")
-        save_path = ("C:\\Users\Quirino\Desktop\Reti\Trained_models\\" +\
-            str(now) + "_" + str(model_down) + "_" +\
-            str(epoch+1) + "epochs_on_" +\
-            str(num_epochs) + "epochs_" +\
-            str(batch_size) + "batch_"+\
-            str(lr) + "LR_" +\
-            str(dropout) + "dropout_" +\
-            optim_choose + "optimizer_" +\
-            ".pth")
-        
-        print(f'Path where the model is saved is: {save_path}')
-        
-        #Saving the model
-        torch.save(model, save_path)
+        save_model(model_down, model, dropout, epoch+1, num_epochs, batch_size, optim_choose, lr, \
+                val_epoch_acc, val_epoch_acc_top)
 
-    #Plot
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize = (15,6))
-    fig.suptitle(f'Model:{model_down}, Intermediate features: {intfeat}, Dropout:{dropout} Epochs: {epoch+1}, optimizer: {optim_choose} with momentum:{momentum} and gamma: {gamma}, \n Loss function:{loss}, learning rate:{lr}')
-
-    x = [i for i in range(epoch+1)]
-    #print(x)
-    ax1.set_title("Loss")
-    ax1.plot(x, summary_loss_train,  label = 'Training Loss')
-    ax1.plot(x, summary_loss_val, label = 'Validation Loss')
-    ax1.legend()
-
-    sommario_acc_train_array = []
-    for idx in range(len(summary_acc_train)):
-        sommario_acc_train_array.append(summary_acc_train[idx].cpu().clone().detach().numpy())
-        #print(sommario_acc_train_array[idx])
-    # print(f'Sommario acc train array shape: {np.shape(sommario_acc_train_array)}')
-
-    sommario_acc_train_top_array = []
-    for idx in range(len(summary_acc_train_top)):
-        sommario_acc_train_top_array.append(summary_acc_train_top[idx].cpu().clone().detach().numpy())
-        #print(sommario_acc_train_array[idx])
-    # print(f'Sommario acc train top array shape: {np.shape(sommario_acc_train_top_array)}')
-
-    sommario_acc_val_array = []
-    for idx in range(len(summary_acc_val)):
-        sommario_acc_val_array.append(summary_acc_val[idx].cpu().clone().detach().numpy())
-        #print(sommario_acc_val_array[idx])
-    # print(f'Sommario acc val array shape: {np.shape(sommario_acc_val_array)}')
-
-    sommario_acc_val_top_array = []
-    for idx in range(len(summary_acc_val_top)):
-        sommario_acc_val_top_array.append(summary_acc_val_top[idx].cpu().clone().detach().numpy())
-        # print(sommario_acc_val_array[idx])
-    # print(f'Sommario acc val top array shape: {np.shape(sommario_acc_val_top_array)}')
-
-    ax2.set_title("Accuracy")
-    ax2.plot(x, sommario_acc_train_array, label='Training Accuracy')
-    ax2.plot(x, sommario_acc_val_array, label='Validation Accuracy')
-    ax2.plot(x, sommario_acc_train_top_array, label = 'Training top5 Accuracy')
-    ax2.plot(x, sommario_acc_val_top_array, label = 'Validation top5 Accuracy')
-    ax2.legend()
-
-    plt.show()
+    graph_plot(model_down, intfeat, dropout, epoch, optim_choose, momentum, gamma, loss, lr, k,\
+        summary_loss_train, summary_loss_val,\
+        summary_acc_train, summary_acc_train_top,
+        summary_acc_val, summary_acc_val_top)

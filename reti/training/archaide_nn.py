@@ -16,6 +16,7 @@ import copy
 import os
 
 import numpy as np
+import pprint
 
 import matplotlib.pyplot as plt
 
@@ -156,10 +157,10 @@ for parameter in model.parameters():
 
 # only two linear layers and dropout
 model.fc = nn.Sequential(
-    nn.Dropout(dropout),
+    # nn.Dropout(dropout),
     nn.Linear(model.fc.in_features, intfeat),
     nn.ReLU(),
-    nn.Dropout(dropout),
+    # nn.Dropout(dropout),
     nn.Linear(intfeat, number_of_classes)
 )
 
@@ -209,20 +210,23 @@ k = int(k)
 num_epochs = input("Please enter the number of epochs (integer):\n")
 num_epochs = int(num_epochs) 
 
-#set patience and delta for early stop
-pat = input("Insert how many epochs for patience \n")
-pat = int(pat)
-delta = input("Insert a delta \n")
-delta = float(delta)
-
 #choose if you want early_stop with train_val comparison or only on val
 early_choose = input("Do you want to use early stop with comparison on [T]rain-Val loss comparison or only on[V]al loss or [N]one? \n")
+
+#set patience and delta for early stop
+if early_choose == "T" or early_choose == "V":
+    pat = input("Insert how many epochs for patience \n")
+    pat = int(pat)
+    delta = input("Insert a delta \n")
+    delta = float(delta)
+
 if early_choose == "T":
     early_stopper_train_val = early_stop_train_val.EarlyStopping_Train_Val(tolerance=pat, min_delta=delta)
 elif early_choose == "V":
     early_stopper_val = early_stop_val.EarlyStopper(patience=pat, min_delta=delta)
 else:
     pass
+
 
 save = input("Do you want to save the model at the end of training (model is saved every 10 epochs)?y/N \n")
 
@@ -320,9 +324,14 @@ for epoch in range(num_epochs):
         #summary_acc_train.append(epoch_acc)
 
         if (i+1) % 5 == 0:
-            print('Epoch [%d/%d], lter [%d/%d] Loss: %.4f, Accuracy_top1 : %.4f %%, Accuracy_top%d : %.4f %%'
+            train_sum = ('Epoch [%d/%d], lter [%d/%d] Loss: %.4f, Accuracy_top1 : %.4f %%, Accuracy_top%d : %.4f %%'
                  %(epoch+1, num_epochs, i+1, total_batch, cost.item(), \
                   (100 * epoch_acc.item()), k, (100 * epoch_acc_top.item())))
+            print(train_sum)
+        
+            # with open("F:\ArchAIDE_nn\Archapp_pytorch\python\ArchAIDE_pytorch\Reti\Training\prova.txt", "a+") as train_file:
+            #     train_file.write(train_sum + "\n")
+            #     train_file.close()
           
     scheduler.step()
 #evaluating the model
@@ -385,6 +394,16 @@ for epoch in range(num_epochs):
                 %(val_cost.item(), (100 * float(correct) / total), (100 * float(correcttop / total))))
 
     if (epoch+1) % 10 == 0:
+        summary_10 = (f'Summary: Neural Network:{model_down}, \
+            epochs:{epoch+1},batch:{batch_size}, learning rate: {lr}, Intermediate features: {intfeat}, Dropout:{dropout},\n \
+            optimizer: {optimizer} \n \
+            Training: Total batch: [{total_batch}], Loss:{epoch_loss}, Accuracy: top1: {100 * epoch_acc}%, top{k}: {100 * epoch_acc_top}% \n \
+            Validation: batch size:[{total_batch_val}], Loss: {val_epoch_loss}, Accuracy: {100 * val_epoch_acc}%, top{k}: {100 * val_epoch_acc_top}%')
+
+        with open("F:\ArchAIDE_nn\Archapp_pytorch\python\ArchAIDE_pytorch\Reti\Training\Train_data_file_auto.txt", "a+") as train_file:
+            train_file.write(summary_10 + "\n \n")
+            train_file.close()
+
         now = datetime.now()
         now = now.strftime("%Y%m%d%H%M")
         save_path = ("C:\\Users\Quirino\Desktop\Reti\Trained_models\\" +\
@@ -394,9 +413,9 @@ for epoch in range(num_epochs):
             str(batch_size) + "batch_"+\
             str(lr) + "LR_" +\
             str(dropout) + "dropout_" +\
-            optim_choose + "optimizer_" +\
-            val_epoch_acc + "_accuracy_top1_"+\
-            val_epoch_acc_top + "_accuracy_top5"+\
+            optim_choose + "_optimizer_" +\
+            str(round(val_epoch_acc.item(),3)) + "_accuracy_top1_"+\
+            str(round(val_epoch_acc_top.item(),3)) + "_accuracy_top"+ str(k) +\
             ".pth")
         
         #Saving the model
@@ -464,10 +483,10 @@ train_data = (f'Summary: Neural Network:{model_down},\n \
 
 print(train_data)
 
-with open('train_data_file_auto.txt', 'a+') as train_file:
+# with open('train_data_file_auto.txt', 'a+') as train_file:
 # train_file = open('train_data_file_auto.txt', 'a')
-    train_file.write(train_data + "\n")
-    train_file.close()
+# train_file.write(train_data + "\n")
+# train_file.close()
 
 # print(f'Summary loss train: {summary_loss_train}')
 # print(f'Summary loss train shape: {np.shape(summary_loss_train)}')
@@ -510,7 +529,9 @@ if save == "y":
         str(batch_size) + "batch_"+\
         str(lr) + "LR_" +\
         str(dropout) + "dropout_" +\
-        optim_choose + "optimizer_" +\
+        optim_choose + "_optimizer_" +\
+        str(round(val_epoch_acc.item(),3)) + "_accuracy_top1_"+\
+        str(round(val_epoch_acc_top.item(),3)) + "_accuracy_top"+ str(k) +\
         ".pth")
     
     print(f'Path where the model is saved is: {save_path}')
