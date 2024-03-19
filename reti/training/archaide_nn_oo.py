@@ -359,7 +359,7 @@ if __name__ == '__main__':
     
     epoch_save = 0
 
-    load_or_new = input("Do you want to load a checkpoint or to train a new model? \n")
+    load_or_new = input("Do you want to [L]oad a checkpoint or to train a [N]ew model? (L/N) \n")
 
     if load_or_new == "L":
         epoch_save, cost = load_checkpoint(model)
