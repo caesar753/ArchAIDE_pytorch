@@ -27,10 +27,10 @@ import early_stop_val_class as early_stop_val
 import early_stop_train_val_class as early_stop_train_val
 
 
-def tranformation():
+def tranformation(dimension):
 #defining function that transforms images for training (cropping, resizing, flipping), and normalize
     train_trans = transforms.Compose([
-        transforms.RandomResizedCrop(im_dim),
+        transforms.RandomResizedCrop(dimension),
         transforms.RandomHorizontalFlip(),
         transforms.ToTensor(), # ToTensor : [0, 255] -> [0, 1]
         transforms.Normalize(mean = [0.485, 0.456, 0.406],
@@ -107,7 +107,7 @@ def graph_plot(model, intermediate, drop, epoch, epoch_plot, optimizer, momentum
     now = datetime.now()
     now = now.strftime("%Y%m%d%H%M")
 
-    save_fig_path = ('F:\\ArchAIDE_nn\Archapp_pytorch\Python\ArchAIDE_pytorch\Data\\202403\Prove_to_do_list\Auto_fig\\'+\
+    save_fig_path = ('..\\..\\Data\\202403\Prove_to_do_list\Auto_fig\\'+\
         str(now) + "_" + str(model) + "_" +\
         optimizer + "_optimizer_" +\
         str(epoch+1) + "_epochs_" +\
@@ -199,7 +199,7 @@ def summary(model_str, epoch, batch, lr, inter_feat, drop, optim,\
 
     print(summary_str)
 
-    with open("F:\ArchAIDE_nn\Archapp_pytorch\python\ArchAIDE_pytorch\Reti\Training\Train_data_file_auto.txt", "a+") as train_file:
+    with open("Train_data_file_auto.txt", "a+") as train_file:
                     train_file.write(summary_str + "\n \n")
                     train_file.close() 
 
@@ -224,13 +224,14 @@ if __name__ == '__main__':
     else:
         im_dim = int(224)
 
-    train_transform, test_transform = tranformation()
+    train_transform, test_transform = tranformation(im_dim)
 
     #Defining path
-    os.chdir("F:\ArchAIDE_nn\Archapp_pytorch\AllClasses_giusto")
-    PATH = os.getcwd()
+    # os.chdir("F:\ArchAIDE_nn\Archapp_pytorch\AllClasses_giusto")
+    # PATH = os.getcwd()
     #PATH = "F:\ArchAIDE_nn\archapp_pytorch\ "
 
+    PATH = "F:\\ArchAIDE_nn\\Archapp_pytorch\\AllClasses_giusto\\"
     print(PATH)
 
     TRAIN_FOLDER = os.path.join(PATH, 'Train') 
@@ -281,7 +282,6 @@ if __name__ == '__main__':
 
     #calling next image and label with iterator
     images, labels = dataiter.next()
-
 
     #function that show images associated to labels
     imshow(images, [train_data.classes[i] for i in labels])
@@ -654,7 +654,7 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
 
         print("Got Ctrl-C, saving data, model and checkpoint of the last completed epoch")
-        
+
         summary(model_down, epoch-1, batch_size, lr, intfeat, dropout, optimizer,\
                     total_batch, epoch_loss, epoch_acc, epoch_acc_top,
                     total_batch_val,val_epoch_loss, val_epoch_acc, val_epoch_acc_top)
