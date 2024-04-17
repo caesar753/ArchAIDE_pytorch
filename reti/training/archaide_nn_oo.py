@@ -39,7 +39,7 @@ def tranformation(dimension):
 
     #defining function that transforms images for testing/validation (resizing), and normalize
     test_trans = transforms.Compose([
-        transforms.Resize((im_dim, im_dim)),
+        transforms.Resize((dimension, dimension)),
         transforms.ToTensor(), # ToTensor : [0, 255] -> [0, 1]
         transforms.Normalize(mean = [0.485, 0.456, 0.406],
                             std = [0.229, 0.224, 0.225])

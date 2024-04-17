@@ -1,0 +1,335 @@
+Summary: Neural Network:resnet50,                     epochs:10,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.001
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:2.2758560295606043, Accuracy: top1: 40.54561233520508%, top5: 70.8140869140625% 
+                     Validation: batch size:[595], Loss: 2.4596043170620034, Accuracy: 36.25672149658203%, top5: 69.15322875976562%
+ 
+Summary: Neural Network:resnet50,                     epochs:20,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.0009000000000000001
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:1.9773376607669488, Accuracy: top1: 47.069862365722656%, top5: 75.89491271972656% 
+                     Validation: batch size:[595], Loss: 2.2615451385737746, Accuracy: 40.49059295654297%, top5: 72.61425018310547%
+ 
+Summary: Neural Network:resnet50,                     epochs:30,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.0009000000000000001
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:1.7931186424043486, Accuracy: top1: 51.64549255371094%, top5: 79.63336944580078% 
+                     Validation: batch size:[595], Loss: 2.3358261268385636, Accuracy: 40.154571533203125%, top5: 71.33736419677734%
+ 
+Summary: Neural Network:resnet50,                     epochs:40,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.0008100000000000001
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:1.6738377606139172, Accuracy: top1: 54.40242385864258%, top5: 80.87471008300781% 
+                     Validation: batch size:[595], Loss: 2.2492861367401575, Accuracy: 43.61559295654297%, top5: 74.1263427734375%
+ 
+Summary: Neural Network:resnet50,                     epochs:50,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.0008100000000000001
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:1.567392274231906, Accuracy: top1: 56.986141204833984%, top5: 83.21305084228516% 
+                     Validation: batch size:[595], Loss: 2.1604093051871023, Accuracy: 44.55644989013672%, top5: 75.40322875976562%
+ 
+Summary: Neural Network:resnet50,                     epochs:60,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.000729
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:1.5068655160086888, Accuracy: top1: 58.328521728515625%, top5: 83.47286224365234% 
+                     Validation: batch size:[595], Loss: 2.3610131379357107, Accuracy: 41.90188217163086%, top5: 73.21908569335938%
+ 
+Summary: Neural Network:resnet50,                     epochs:70,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.000729
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:1.424960321865064, Accuracy: top1: 60.46478271484375%, top5: 84.8585433959961% 
+                     Validation: batch size:[595], Loss: 2.2677296138248377, Accuracy: 43.413978576660156%, top5: 74.69757843017578%
+ 
+Summary: Neural Network:resnet50,                     epochs:80,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.0006561000000000001
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:1.3816297937299644, Accuracy: top1: 61.056583404541016%, top5: 85.08949279785156% 
+                     Validation: batch size:[595], Loss: 2.314398373942822, Accuracy: 43.413978576660156%, top5: 74.83198547363281%
+ 
+Summary: Neural Network:resnet50,                     epochs:90,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.0006561000000000001
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:1.3073335350684685, Accuracy: top1: 63.423789978027344%, top5: 86.6050796508789% 
+                     Validation: batch size:[595], Loss: 2.2726036028470844, Accuracy: 44.75806427001953%, top5: 75.67204284667969%
+ 
+Summary: Neural Network:resnet50,                     epochs:100,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.00059049
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:1.2871704509235244, Accuracy: top1: 64.34757995605469%, top5: 86.82159423828125% 
+                     Validation: batch size:[595], Loss: 2.288457633703396, Accuracy: 45.46371078491211%, top5: 75.73925018310547%
+ 
+Summary: Neural Network:resnet50,                     epochs:110,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.00059049
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:1.2147068039123743, Accuracy: top1: 66.32505798339844%, top5: 87.26905059814453% 
+                     Validation: batch size:[595], Loss: 2.3194202672569983, Accuracy: 46.16935729980469%, top5: 75.47042846679688%
+ 
+Summary: Neural Network:resnet50,                     epochs:120,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.000531441
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:1.2216030802471805, Accuracy: top1: 65.7909927368164%, top5: 87.34122467041016% 
+                     Validation: batch size:[595], Loss: 2.3621285867586894, Accuracy: 44.3884391784668%, top5: 75.03359985351562%
+ 
+Summary: Neural Network:resnet50,                     epochs:130,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.000531441
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:1.148558962201876, Accuracy: top1: 68.05715942382812%, top5: 88.0196304321289% 
+                     Validation: batch size:[595], Loss: 2.2495007289883993, Accuracy: 45.69892501831055%, top5: 77.18414306640625%
+ 
+Summary: Neural Network:resnet50,                     epochs:140,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.0004782969
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:1.138710884699183, Accuracy: top1: 68.73556518554688%, top5: 88.38048553466797% 
+                     Validation: batch size:[595], Loss: 2.3163157129680276, Accuracy: 46.2365608215332%, top5: 76.81451416015625%
+ 
+Summary: Neural Network:resnet50,                     epochs:150,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.0004782969
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:1.122826441122175, Accuracy: top1: 69.16859436035156%, top5: 88.59700012207031% 
+                     Validation: batch size:[595], Loss: 2.219938275496906, Accuracy: 47.379032135009766%, top5: 77.62096405029297%
+ 
+Summary: Neural Network:resnet50,                     epochs:160,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.00043046721
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:1.0911782744341136, Accuracy: top1: 69.93360900878906%, top5: 89.13106536865234% 
+                     Validation: batch size:[595], Loss: 2.2748700651986105, Accuracy: 46.505374908447266%, top5: 76.91532135009766%
+ 
+Summary: Neural Network:resnet50,                     epochs:170,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.00043046721
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:1.0720913130990295, Accuracy: top1: 70.49653625488281%, top5: 88.79907989501953% 
+                     Validation: batch size:[595], Loss: 2.266464550689023, Accuracy: 47.44623565673828%, top5: 77.04972839355469%
+ 
+Summary: Neural Network:resnet50,                     epochs:180,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.000387420489
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:1.0617979991561077, Accuracy: top1: 70.42436218261719%, top5: 89.28984069824219% 
+                     Validation: batch size:[595], Loss: 2.2846056258516207, Accuracy: 46.47177505493164%, top5: 76.81451416015625%
+ 
+Summary: Neural Network:resnet50,                     epochs:190,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.000387420489
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:1.0301964156853636, Accuracy: top1: 71.66570281982422%, top5: 89.15992736816406% 
+                     Validation: batch size:[595], Loss: 2.3144863440144445, Accuracy: 46.90860366821289%, top5: 76.71371459960938%
+ 
+Summary: Neural Network:resnet50,                     epochs:200,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.0003486784401
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:1.0365915484108057, Accuracy: top1: 71.66570281982422%, top5: 89.26097106933594% 
+                     Validation: batch size:[595], Loss: 2.3365184950431988, Accuracy: 45.66532516479492%, top5: 77.38574981689453%
+ 
+Summary: Neural Network:resnet50,                     epochs:210,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.0003486784401
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:1.001816687534276, Accuracy: top1: 72.45958709716797%, top5: 89.93937683105469% 
+                     Validation: batch size:[595], Loss: 2.291732260907289, Accuracy: 46.90860366821289%, top5: 77.11693572998047%
+ 
+Summary: Neural Network:resnet50,                     epochs:220,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.00031381059609000004
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.9900503507276242, Accuracy: top1: 72.50288391113281%, top5: 90.22805786132812% 
+                     Validation: batch size:[595], Loss: 2.2909756950622233, Accuracy: 49.092742919921875%, top5: 77.65457153320312%
+ 
+Summary: Neural Network:resnet50,                     epochs:230,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.00031381059609000004
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.9916369234212818, Accuracy: top1: 72.92147827148438%, top5: 89.6939926147461% 
+                     Validation: batch size:[595], Loss: 2.21510325586054, Accuracy: 48.622314453125%, top5: 77.65457153320312%
+ 
+Summary: Neural Network:resnet50,                     epochs:236,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.00031381059609000004
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.5125014993534736, Accuracy: top1: 37.2113151550293%, top5: 46.08833694458008% 
+                     Validation: batch size:[595], Loss: 2.2440498314343484, Accuracy: 48.353492736816406%, top5: 78.125%
