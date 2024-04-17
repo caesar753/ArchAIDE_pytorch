@@ -6,6 +6,20 @@ The project aims to streamline the process of pottery analysis, making it faster
 
 In this repository we have updated the ArchAIDE framework, originally written in Tensorflow 1.x, bringing it to Pytorch, which has a series of features useful for the long-term maintenance of the project.
 
+
+## Installation
+
+### Prequisities
+
+You need to install required packages using
+
+```
+pip install -r requirements.txt 
+```
+
+### Training
+To launche the training of a neural network you can launch these commands
+
 ```
 cd reti/training/
 python3 archaide_nn_oo.py
