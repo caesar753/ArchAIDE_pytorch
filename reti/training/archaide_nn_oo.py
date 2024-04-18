@@ -107,7 +107,8 @@ def graph_plot(model, intermediate, drop, epoch, epoch_plot, optimizer, momentum
     now = datetime.now()
     now = now.strftime("%Y%m%d%H%M")
 
-    save_fig_path = ('..\\..\\Data\\202403\Prove_to_do_list\Auto_fig\\'+\
+    # save_fig_path = ('..\\..\\Data\\202403\Prove_to_do_list\Auto_fig\\'+\
+    save_fig_path = ('..\\..\\Data\\Auto_fig\\'+\
         str(now) + "_" + str(model) + "_" +\
         optimizer + "_optimizer_" +\
         str(epoch+1) + "_epochs_" +\
@@ -126,7 +127,8 @@ def save_model(model, model_trained, drop, epoch, num_epochs, batch, optimizer, 
     now = datetime.now()
     now = now.strftime("%Y%m%d%H%M")
     
-    save_path = ("F:\ArchAIDE_nn\Archapp_pytorch\Trained_models\\" +\
+    # save_path = ("F:\ArchAIDE_nn\Archapp_pytorch\Trained_models\\" +\
+    save_path = ("..\\..\\Data\\Trained_models\\" +\
         str(now) + "_" + str(model) + "_" +\
         str(epoch+1) + "epochs_on_" +\
         str(num_epochs) + "epochs_" +\
@@ -147,7 +149,8 @@ def save_checkpoint(model, model_trained, drop, epoch, num_epochs, batch, optim_
     now = datetime.now()
     now = now.strftime("%Y%m%d%H%M")
     
-    save_path = ("F:\ArchAIDE_nn\Archapp_pytorch\Trained_models\Checkpoints\\" +\
+    # save_path = ("F:\ArchAIDE_nn\Archapp_pytorch\Trained_models\Checkpoints\\" +\
+    save_path = ("..\\..\\Data\\Trained_models\\Checkpoints\\" +\
         str(now) + "_" + str(model) + "_" +\
         str(epoch+1) + "epochs_on_" +\
         str(num_epochs) + "epochs_" +\
@@ -386,6 +389,10 @@ if __name__ == '__main__':
         early_stopper_val = early_stop_val.EarlyStopper(patience=pat, min_delta=delta)
     else:
         pass
+
+    # create directory to save models
+    if not os.path.isdir("..\\..\\Data\\Trained_models"): 
+        os.makedirs("..\\..\\Data\\Trained_models") 
 
     save = input("Do you want to save the model at the end of training (model is saved every 10 epochs)?y/N \n")
 
