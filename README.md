@@ -17,8 +17,8 @@ You need to install required packages using
 pip install -r requirements.txt 
 ```
 
-### Training
-To launche the training of a neural network you can launch these commands
+## Training
+To launch the training of a neural network you can launch these commands
 
 ```
 cd reti/training/
@@ -29,3 +29,15 @@ In the shell you will be asked some questions (which NN? which optimizer? how mu
 
 Then the training will start.
 
+The entire model (.pth file) and its checkpoint (.pt file) is saved in data/trained_models and data/trained_model/checkpoints respectively every 10 epochs, you can choose also if save them at the end of the training.
+
+You can restart a training from its checkpoint.
+
+## Inference
+
+To try inference of a trained neural network you can launch these commands
+
+```
+cd reti/
+python3 inference.py
+```
