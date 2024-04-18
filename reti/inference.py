@@ -32,7 +32,8 @@ infer_transform= transforms.Compose([
                          std = [0.229, 0.224, 0.225])
 ])
 
-save_path = "C:\\Users\Quirino\Desktop\Reti\Trained_models\\"
+# save_path = "C:\\Users\Quirino\Desktop\Reti\Trained_models\\"
+save_path = "..\\Data\\Trained_models\\"
 
 to_load = input("Enter the model to load \n")
 

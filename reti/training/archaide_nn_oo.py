@@ -179,7 +179,8 @@ def load_checkpoint( model_load):
     # optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
 
     model_saved = input("enter the name of the saved checkpoint \n")
-    checkpoint = torch.load("F:\ArchAIDE_nn\Archapp_pytorch\Trained_models\Checkpoints\\" + model_saved)
+    # checkpoint = torch.load("F:\ArchAIDE_nn\Archapp_pytorch\Trained_models\Checkpoints\\" + model_saved)
+    checkpoint = torch.load("..\\..\\Data\\Trained_models\Checkpoints\\" + model_saved)
     model_load.load_state_dict(checkpoint['model_state_dict'])
     optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
     epoch_save = checkpoint['epoch'] + 1
@@ -391,8 +392,8 @@ if __name__ == '__main__':
         pass
 
     # create directory to save models
-    if not os.path.isdir("..\\..\\Data\\Trained_models"): 
-        os.makedirs("..\\..\\Data\\Trained_models") 
+    if not os.path.isdir("..\\..\\Data\\Trained_models\\Checkpoints"): 
+        os.makedirs("..\\..\\Data\\Trained_models\\Checkpoints", exist_ok=True) 
 
     save = input("Do you want to save the model at the end of training (model is saved every 10 epochs)?y/N \n")
 
