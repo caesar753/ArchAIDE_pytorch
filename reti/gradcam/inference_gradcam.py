@@ -124,7 +124,7 @@ if __name__ == '__main__':
         "gradcamelementwise": GradCAMElementWise
     }
 
-    model = torch.load(os.path.join("..\\..\\Data\\Trained_models\\", args.model))
+    model = torch.load(os.path.join("..\\..\\Data\\Trained_models", args.model))
     # print(model)
 
     if args.device:
@@ -143,7 +143,7 @@ if __name__ == '__main__':
     else:
         model = model.to(torch.device("cpu")).eval()
 
-    image_dir = os.path.join(args.output_dir, f'{args.image_path[args.image_path.find("MTL"):]}')
+    image_dir = os.path.join(args.output_dir,f'{args.model}', f'{args.image_path[args.image_path.find("MTL"):]}')
     os.makedirs(image_dir, exist_ok=True)
 
     # if args.device:
