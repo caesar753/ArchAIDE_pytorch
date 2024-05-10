@@ -4591,3 +4591,73 @@ Parameter Group 0
                      Training: Total batch: [1385], Loss:nan, Accuracy: top1: 1.4289838075637817%, top5: 5.3695149421691895% 
                      Validation: batch size:[595], Loss: nan, Accuracy: 2.4193546772003174%, top5: 7.090053558349609%
  
+Summary: Neural Network:inception_v3,                     epochs:110,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.00059049
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:2.184721279317216, Accuracy: top1: 41.613739013671875%, top5: 71.83891296386719% 
+                     Validation: batch size:[595], Loss: 2.384131581913079, Accuracy: 37.970428466796875%, top5: 71.43817138671875%
+ 
+Summary: Neural Network:inception_v3,                     epochs:120,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.000531441
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:1.5682338860975342, Accuracy: top1: 57.05831527709961%, top5: 82.54907989501953% 
+                     Validation: batch size:[595], Loss: 2.066688747217839, Accuracy: 47.07661437988281%, top5: 76.24327850341797%
+ 
+Summary: Neural Network:inception_v3,                     epochs:130,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.000531441
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:1.1975731883287015, Accuracy: top1: 67.33544921875%, top5: 86.50404357910156% 
+                     Validation: batch size:[595], Loss: 1.9846888853835383, Accuracy: 50.80644989013672%, top5: 79.03225708007812%
+ 
+Summary: Neural Network:inception_v3,                     epochs:140,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.0004782969
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.984455765339745, Accuracy: top1: 72.30081176757812%, top5: 89.03002166748047% 
+                     Validation: batch size:[595], Loss: 1.8857837338629555, Accuracy: 54.97311782836914%, top5: 82.1236572265625%
+ 
+Summary: Neural Network:inception_v3,                     epochs:150,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.0004782969
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.8788335827925602, Accuracy: top1: 75.89491271972656%, top5: 90.48787689208984% 
+                     Validation: batch size:[595], Loss: 1.9843065815898577, Accuracy: 53.62903594970703%, top5: 81.75403594970703%
+ 
