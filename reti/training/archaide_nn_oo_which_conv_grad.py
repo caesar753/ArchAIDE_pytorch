@@ -193,10 +193,11 @@ def load_checkpoint( model_load):
 
 def summary(model_str, epoch, batch, lr, inter_feat, drop, optim,\
     total_b, ep_loss, ep_acc, ep_acc_top,\
-    total_b_val, val_ep_loss, val_ep_acc, val_ep_acc_top ):
+    total_b_val, val_ep_loss, val_ep_acc, val_ep_acc_top, trained=[] ):
 
     summary_str = (f'Summary: Neural Network:{model_str}, \
                     epochs:{epoch+1},batch:{batch}, learning rate: {lr}, Intermediate features: {inter_feat}, Dropout:{drop},\n \
+                    trained_layers: {trained}\n \
                     optimizer: {optim} \n \
                     Training: Total batch: [{total_b}], Loss:{ep_loss}, Accuracy: top1: {100 * ep_acc}%, top{k}: {100 * ep_acc_top}% \n \
                     Validation: batch size:[{total_b_val}], Loss: {val_ep_loss}, Accuracy: {100 * val_ep_acc}%, top{k}: {100 * val_ep_acc_top}%')
@@ -314,6 +315,7 @@ if __name__ == '__main__':
     for parameter in model.parameters():
         parameter.requires_grad = False
 
+    print_layers = 'n'
     unfreeze = input('Do you want to unfreeze some layers?')
     while unfreeze == 'y':
         wh_unfreeze = input('Which layer do you want to unfreeze?')
@@ -321,6 +323,7 @@ if __name__ == '__main__':
             if name.startswith(wh_unfreeze):
                 print(name)
                 parameter_un.requires_grad = True
+                print_layers = 'y'
         unfreeze = input('Do you want to unfreeze any other layer?')
         
     # for names, param in model.named_parameters():
@@ -342,9 +345,11 @@ if __name__ == '__main__':
         model = model.to(device)
     print(model.fc)
     
+    layer_names = []
     print("These layers will be trained: \n")
     for names, param in model.named_parameters():
         if param.requires_grad == True:
+            layer_names.append(names)
             print(names)
 
     #setting optimizer with learning rate, for now RMSProp with lr=0.001
@@ -429,15 +434,27 @@ if __name__ == '__main__':
     best_model_wts = copy.deepcopy(model.state_dict())
     best_acc = 0.0
 
+    # if print_layers == 'y': \
     print(f'Summary:\n \
-            Neural Networl:{model_down},\n \
-            epochs:{num_epochs},\n \
-            batch:{batch_size},\n \
-            learning rate: {lr},\n \
-            Intermediate features: {intfeat},\n \
-            Dropout:{dropout},\n \
-            optimizer: {optimizer} \n')
-
+        Neural Networl:{model_down},\n \
+        epochs:{num_epochs},\n \
+        batch:{batch_size},\n \
+        learning rate: {lr},\n \
+        Intermediate features: {intfeat},\n \
+        Dropout:{dropout},\n \
+        Trained layers: {layer_names}\n \
+        optimizer: {optimizer}\n \
+        ')
+    # else:    
+    #     print(f'Summary:\n \
+    #             Neural Networl:{model_down},\n \
+    #             epochs:{num_epochs},\n \
+    #             batch:{batch_size},\n \
+    #             learning rate: {lr},\n \
+    #             Intermediate features: {intfeat},\n \
+    #             Dropout:{dropout},\n \
+    #             optimizer: {optimizer} \n')
+            
     # epoch_plot = num_epochs - epoch
     # epoch_plot = 0
     # print(epoch_plot)
@@ -685,7 +702,7 @@ if __name__ == '__main__':
 
         summary(model_down, epoch-1, batch_size, lr, intfeat, dropout, optimizer,\
                     total_batch, epoch_loss, epoch_acc, epoch_acc_top,
-                    total_batch_val,val_epoch_loss, val_epoch_acc, val_epoch_acc_top)
+                    total_batch_val,val_epoch_loss, val_epoch_acc, val_epoch_acc_top, layer_names)
         
         if save == "y":
             save_model(model_down, model, dropout, epoch-1, num_epochs, batch_size, optim_choose, lr, \
