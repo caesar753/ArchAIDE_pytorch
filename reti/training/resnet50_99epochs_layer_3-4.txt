@@ -1,0 +1,3 @@
+
+train: loss 0.9041 acc top1: 88.0012% acc top5: 94.4861%
+val: loss 1.5485 Acc top1: 70.554622% acc top5: 90.420169%
