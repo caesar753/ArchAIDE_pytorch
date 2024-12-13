@@ -33,7 +33,10 @@ infer_transform= transforms.Compose([
 ])
 
 # save_path = "C:\\Users\Quirino\Desktop\Reti\Trained_models\\"
-save_path = "..\\Data\\Trained_models\\"
+if os.name == 'nt':
+  save_path = "..\\Data\\Trained_models\\"
+else:
+  save_path = "../Data/Trained_models/"
 
 to_load = input("Enter the model to load \n")
 

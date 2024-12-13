@@ -44,14 +44,23 @@ from pytorch_grad_cam.utils.model_targets import ClassifierOutputTarget
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--device', type=str,
-                        help='Torch device to use')
-    parser.add_argument(
-        '--model',
-        type=str,
-        default='..\\Data\\Trained_models\\202404271957_resnet50_200epochs_on_1000epochs_5batch_0.001LR_0.6dropout_sgdoptimizer_0.485_accuracy_top1_0.777_accuracy_top5.pth',
-        help='Input image path'
-    )
+    parser.add_argument('--device', type=str, default='cuda:0',
+                        help='Torch device to use'
+                        )
+    if os.name == 'nt':  # Windows
+        parser.add_argument(
+            '--model',
+            type=str,
+            default='..\\Data\\Trained_models\\202404271957_resnet50_200epochs_on_1000epochs_5batch_0.001LR_0.6dropout_sgdoptimizer_0.485_accuracy_top1_0.777_accuracy_top5.pth',
+            help='Input image path'
+        )
+    else:  # Linux or other OS
+        parser.add_argument(
+            '--model',
+            type=str,
+            default='../../Data/Trained_models/202404271957_resnet50_200epochs_on_1000epochs_5batch_0.001LR_0.6dropout_sgdoptimizer_0.485_accuracy_top1_0.777_accuracy_top5.pth',
+            help='Input image path'
+        )
     parser.add_argument(
         '--image-path',
         type=str,
@@ -124,7 +133,13 @@ if __name__ == '__main__':
         "gradcamelementwise": GradCAMElementWise
     }
 
-    model = torch.load(os.path.join("..\\..\\Data\\Trained_models", args.model))
+    if os.name == 'nt':  # Windows
+        model_path = os.path.join("..\\..\\Data\\Trained_models", args.model)
+    else:  # Linux or other OS
+        # model_path = os.path.join("../../Data/Trained_models", args.model)
+        model_path = os.path.join(args.model)
+
+    model = torch.load(os.path.join(model_path, args.model))
     # print(model)
 
     if args.device:
