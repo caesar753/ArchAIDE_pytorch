@@ -136,10 +136,11 @@ if __name__ == '__main__':
     if os.name == 'nt':  # Windows
         model_path = os.path.join("..\\..\\Data\\Trained_models", args.model)
     else:  # Linux or other OS
-        # model_path = os.path.join("../../Data/Trained_models", args.model)
-        model_path = os.path.join(args.model)
+        model_path = os.path.join("../../Data/Trained_models", args.model)
+        # model_path = os.path.join(args.model)
 
-    model = torch.load(os.path.join(model_path, args.model))
+    # model = torch.load(os.path.join(model_path, args.model))
+    model = torch.load(model_path)
     # print(model)
 
     if args.device:
