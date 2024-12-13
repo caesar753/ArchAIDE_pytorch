@@ -107,14 +107,19 @@ def graph_plot(model, intermediate, drop, epoch, epoch_plot, optimizer, momentum
     now = datetime.now()
     now = now.strftime("%Y%m%d%H%M")
 
+    if os.name == 'nt':
+        os_path = "..\\..\\Data\\Auto_fig\\"
+    elif os.name == 'posix':
+        os_path = "../../Data/Auto_fig/"
     # save_fig_path = ('..\\..\\Data\\202403\Prove_to_do_list\Auto_fig\\'+\
-    save_fig_path = ('..\\..\\Data\\Auto_fig\\'+\
-        str(now) + "_" + str(model) + "_" +\
-        optimizer + "_optimizer_" +\
-        str(epoch+1) + "_epochs_" +\
-        str(lr) + "LR_" +\
-        "top_" + str(top)+ "_" +\
-        str(drop) + "dropout" +\
+    # save_fig_path = ('..\\..\\Data\\Auto_fig\\'+\
+    save_fig_path = (os_path +
+        str(now) + "_" + str(model) + "_" +
+        optimizer + "_optimizer_" +
+        str(epoch+1) + "_epochs_" +
+        str(lr) + "LR_" +
+        "top_" + str(top) + "_" +
+        str(drop) + "dropout" +
         ".png")
 
     fig.savefig(save_fig_path)
@@ -127,8 +132,13 @@ def save_model(model, model_trained, drop, epoch, num_epochs, batch, optimizer, 
     now = datetime.now()
     now = now.strftime("%Y%m%d%H%M")
     
+    if os.name == 'nt':
+        os_path = "..\\..\\Data\\Trained_models\\"
+    elif os.name == 'posix':
+        os_path = "../../Data/Trained_models/"
     # save_path = ("F:\ArchAIDE_nn\Archapp_pytorch\Trained_models\\" +\
-    save_path = ("..\\..\\Data\\Trained_models\\" +\
+    # save_path = ("..\\..\\Data\\Trained_models\\" +\
+    save_path = (os_path +\
         str(now) + "_" + str(model) + "_" +\
         str(epoch+1) + "epochs_on_" +\
         str(num_epochs) + "epochs_" +\
@@ -150,7 +160,13 @@ def save_checkpoint(model, model_trained, drop, epoch, num_epochs, batch, optim_
     now = now.strftime("%Y%m%d%H%M")
     
     # save_path = ("F:\ArchAIDE_nn\Archapp_pytorch\Trained_models\Checkpoints\\" +\
-    save_path = ("..\\..\\Data\\Trained_models\\Checkpoints\\" +\
+    if os.name == 'nt':
+        os_path = "..\\..\\Data\\Trained_models\\Checkpoints\\" 
+    elif os.name == 'posix':
+        os_path = "../../Data/Trained_models/Checkpoints/"
+
+    # save_path = ("..\\..\\Data\\Trained_models\\Checkpoints\\" +\
+    save_path = (os_path +\
         str(now) + "_" + str(model) + "_" +\
         str(epoch+1) + "epochs_on_" +\
         str(num_epochs) + "epochs_" +\
@@ -180,7 +196,13 @@ def load_checkpoint( model_load):
 
     model_saved = input("enter the name of the saved checkpoint \n")
     # checkpoint = torch.load("F:\ArchAIDE_nn\Archapp_pytorch\Trained_models\Checkpoints\\" + model_saved)
-    checkpoint = torch.load("..\\..\\Data\\Trained_models\Checkpoints\\" + model_saved)
+    
+    if os.name == 'nt':
+        checkpoint = torch.load("..\\..\\Data\\Trained_models\\Checkpoints\\" + model_saved)
+    elif os.name == 'posix':
+        checkpoint = torch.load("../../Data/Trained_models/Checkpoints/" + model_saved)
+
+
     model_load.load_state_dict(checkpoint['model_state_dict'])
     optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
     epoch_save = checkpoint['epoch'] + 1
@@ -236,7 +258,11 @@ if __name__ == '__main__':
     # PATH = os.getcwd()
     #PATH = "F:\ArchAIDE_nn\archapp_pytorch\ "
 
-    PATH = "F:\\ArchAIDE_nn\\Archapp_pytorch\\AllClasses_giusto\\"
+    # PATH = "F:\\ArchAIDE_nn\\Archapp_pytorch\\AllClasses_giusto\\"
+    if os.name == 'nt':
+        PATH = "..\\..\\All_Classes\\"
+    elif os.name == 'posix':
+        PATH = "../../All_Classes/"
     print(PATH)
 
     TRAIN_FOLDER = os.path.join(PATH, 'Train') 
@@ -286,14 +312,15 @@ if __name__ == '__main__':
     dataiter = iter(train_loader)
 
     #calling next image and label with iterator
-    images, labels = dataiter.next()
+    # images, labels = dataiter.next()
+    images, labels = next(dataiter)
 
     #function that show images associated to labels
     imshow(images, [train_data.classes[i] for i in labels])
 
     #downloading the model 
     torch.hub._validate_not_a_forked_repo=lambda a,b,c: True    
-    model = torch.hub.load('pytorch/vision:v0.10.0', model_down, pretrained=True, force_reload=True)
+    model = torch.hub.load('pytorch/vision:v0.10.0', model_down, weights='DEFAULT', force_reload=True)
 
     #loading the model
     model
