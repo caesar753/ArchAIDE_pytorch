@@ -637,7 +637,7 @@ if __name__ == '__main__':
 
                 summary(model_down, epoch, batch_size, lr, intfeat, dropout, optimizer,\
                     total_batch, epoch_loss, epoch_acc, epoch_acc_top,\
-                    total_batch_val,val_epoch_loss, val_epoch_acc, val_epoch_acc_top)
+                    total_batch_val,val_epoch_loss, val_epoch_acc, val_epoch_acc_top, layer_names)
 
                 # summary_10 = (f'Summary: Neural Network:{model_down}, \
                 #     epochs:{epoch+1},batch:{batch_size}, learning rate: {lr}, Intermediate features: {intfeat}, Dropout:{dropout},\n \
@@ -709,7 +709,7 @@ if __name__ == '__main__':
 
         summary(model_down, epoch, batch_size, lr, intfeat, dropout, optimizer,\
             total_batch, epoch_loss, epoch_acc, epoch_acc_top,\
-            total_batch_val,val_epoch_loss, val_epoch_acc, val_epoch_acc_top)
+            total_batch_val,val_epoch_loss, val_epoch_acc, val_epoch_acc_top, layer_names)
 
         if save == "y":
             save_model(model_down, model, dropout, epoch, num_epochs, batch_size, optim_choose, lr, \
