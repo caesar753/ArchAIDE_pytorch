@@ -1,0 +1,109 @@
+Summary: Neural Network:resnet50,                     batch:5, learning rate: 0.001, Intermediate features: 1024,
+			optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.00059049
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+
+Dropout0.2:
+	Epoch 100:
+                     Training: Total batch: [1385], Loss:0.9677712559409914, Accuracy: top1: 73.41223907470703%, top5: 89.92494201660156% 
+                     Validation: batch size:[595], Loss: 2.2726305485627942, Accuracy: 45.69892501831055%, top5: 77.31855010986328%
+	Epoch 200:
+                     Training: Total batch: [1385], Loss:0.7863809153162606, Accuracy: top1: 78.3631591796875%, top5: 91.70034790039062% 
+                     Validation: batch size:[595], Loss: 2.336307964940657, Accuracy: 48.15188217163086%, top5: 76.94892120361328%
+
+	Epoch 300:
+                     Training: Total batch: [1385], Loss:0.6925111633575441, Accuracy: top1: 82.07274627685547%, top5: 92.06119537353516% 
+                     Validation: batch size:[595], Loss: 2.3374313890598515, Accuracy: 48.655914306640625%, top5: 77.92338562011719%
+
+	Epoch 400:
+                     Training: Total batch: [1385], Loss:0.6259173027891518, Accuracy: top1: 83.41513061523438%, top5: 92.99942016601562% 
+                     Validation: batch size:[595], Loss: 2.318344235461536, Accuracy: 48.521507263183594%, top5: 79.03225708007812%
+
+	Epoch 500:
+                     Training: Total batch: [1385], Loss:0.610246770255637, Accuracy: top1: 84.10796356201172%, top5: 93.07159423828125% 
+                     Validation: batch size:[595], Loss: 2.2942460092881154, Accuracy: 49.96639633178711%, top5: 78.8978500366211%
+
+
+
+	epoch 140:
+                     Training: Total batch: [1385], Loss:0.8462126332944943, Accuracy: top1: 77.00635528564453%, top5: 90.58891296386719% 
+                     Validation: batch size:[595], Loss: 2.3136157653562384, Accuracy: 46.84139633178711%, top5: 77.72177124023438%
+
+
+Dropout 0.4:
+	Epoch 100:
+                     Training: Total batch: [1385], Loss:0.9980069395289413, Accuracy: top1: 72.44514465332031%, top5: 90.1414566040039% 
+                     Validation: batch size:[595], Loss: 2.2388132375149277, Accuracy: 46.74059295654297%, top5: 77.41934967041016%
+	Epoch 200:
+                     Training: Total batch: [1385], Loss:0.8929256405079131, Accuracy: top1: 75.6495361328125%, top5: 91.12297821044922% 
+                     Validation: batch size:[595], Loss: 2.320332825962474, Accuracy: 47.379032135009766%, top5: 77.68817138671875%
+	Epoch 300:
+                     Training: Total batch: [1385], Loss:0.7385787709224466, Accuracy: top1: 79.89318084716797%, top5: 92.00346374511719% 
+                     Validation: batch size:[595], Loss: 2.2779803875371885, Accuracy: 48.89112854003906%, top5: 79.03225708007812%
+	Epoch 400:
+                     Training: Total batch: [1385], Loss:0.7261434664990977, Accuracy: top1: 80.39838409423828%, top5: 91.74364471435547% 
+                     Validation: batch size:[595], Loss: 2.300979346426214, Accuracy: 49.19355010986328%, top5: 78.59542846679688%
+	Epoch 500:
+                     Training: Total batch: [1385], Loss:0.668010356428601, Accuracy: top1: 82.11605072021484%, top5: 92.5808334350586% 
+                     Validation: batch size:[595], Loss: 2.261048191495623, Accuracy: 49.932796478271484%, top5: 79.30107879638672%
+
+
+###############################
+	Epoch 140:
+                     Training: Total batch: [1385], Loss:0.8820372347262372, Accuracy: top1: 76.09700012207031%, top5: 91.20958709716797% 
+                     Validation: batch size:[595], Loss: 2.316909790871495, Accuracy: 47.31182861328125%, top5: 77.04972839355469%
+
+Dropout 0.6:
+	Epoch 100:
+                     Training: Total batch: [1385], Loss:1.1165002656656406, Accuracy: top1: 68.8077392578125%, top5: 88.30831909179688% 
+                     Validation: batch size:[595], Loss: 2.200521367817356, Accuracy: 47.17741775512695%, top5: 76.68010711669922%
+	Epoch 200:
+                     Training: Total batch: [1385], Loss:0.8678747090083473, Accuracy: top1: 76.28463745117188%, top5: 90.94976806640625% 
+                     Validation: batch size:[595], Loss: 2.2584044616900996, Accuracy: 48.521507263183594%, top5: 77.68817138671875%
+	Epoch 300:
+                     Training: Total batch: [1385], Loss:0.7503390259955801, Accuracy: top1: 79.90762329101562%, top5: 92.07563781738281% 
+                     Validation: batch size:[595], Loss: 2.2979672453629094, Accuracy: 49.3615608215332%, top5: 77.75537109375%
+	Epoch 400:
+
+	Epoch 500:
+
+
+
+	Epoch 140:
+                     Training: Total batch: [1385], Loss:1.0215842796800934, Accuracy: top1: 72.878173828125%, top5: 89.3764419555664% 
+                     Validation: batch size:[595], Loss: 2.356567353488357, Accuracy: 46.47177505493164%, top5: 76.78091430664062%	
+	Epoch 270:
+                     Training: Total batch: [1385], Loss:0.765101928802962, Accuracy: top1: 79.41686248779297%, top5: 91.90242004394531% 
+                     Validation: batch size:[595], Loss: 2.248608123281375, Accuracy: 49.73118209838867%, top5: 78.25940704345703%
+
+
+Dropout 0.8:
+	Epoch 100:
+                     Training: Total batch: [1385], Loss:1.2871704509235244, Accuracy: top1: 64.34757995605469%, top5: 86.82159423828125% 
+                     Validation: batch size:[595], Loss: 2.288457633703396, Accuracy: 45.46371078491211%, top5: 75.73925018310547%
+	Epoch 200:
+                     Training: Total batch: [1385], Loss:1.0365915484108057, Accuracy: top1: 71.66570281982422%, top5: 89.26097106933594% 
+                     Validation: batch size:[595], Loss: 2.3365184950431988, Accuracy: 45.66532516479492%, top5: 77.38574981689453%
+	Epoch 300:
+
+	Epoch 400:
+
+	Epoch 500:
+
+
+
+
+	Epoch 140:
+                     Training: Total batch: [1385], Loss:1.138710884699183, Accuracy: top1: 68.73556518554688%, top5: 88.38048553466797% 
+                     Validation: batch size:[595], Loss: 2.3163157129680276, Accuracy: 46.2365608215332%, top5: 76.81451416015625%
+	
+	Epoch 230:
+                     Training: Total batch: [1385], Loss:0.9916369234212818, Accuracy: top1: 72.92147827148438%, top5: 89.6939926147461% 
+                     Validation: batch size:[595], Loss: 2.21510325586054, Accuracy: 48.622314453125%, top5: 77.65457153320312%

@@ -1,0 +1,60 @@
+Summary: Neural Network:inception_v3,                     batch:5, learning rate: 0.001, Intermediate features: 1024, 
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.001
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+
+Dropout 0.2:
+	Epoch 100:
+                     Training: Total batch: [1385], Loss:1.1048902493844284, Accuracy: top1: 70.32332611083984%, top5: 88.39491271972656% 
+                     Validation: batch size:[595], Loss: 2.499834950437509, Accuracy: 40.65860366821289%, top5: 71.40457153320312%
+	Epoch 200:
+                     Training: Total batch: [1385], Loss:0.8387041532502544, Accuracy: top1: 78.00231170654297%, top5: 90.94976806640625% 
+                     Validation: batch size:[595], Loss: 2.523608681753338, Accuracy: 43.413978576660156%, top5: 72.7486572265625%
+	Epoch 300:
+
+	Epoch 400:
+
+	Epoch 500:
+
+Dropout 0.4:
+	Epoch 100:
+                     Training: Total batch: [1385], Loss:1.1716011463277047, Accuracy: top1: 68.08602905273438%, top5: 87.58660888671875% 
+                     Validation: batch size:[595], Loss: 2.5123474589619104, Accuracy: 39.38172149658203%, top5: 71.30376434326172%
+	Epoch 200:
+                     Training: Total batch: [1385], Loss:0.9100068211129342, Accuracy: top1: 76.1691665649414%, top5: 89.96824645996094% 
+                     Validation: batch size:[595], Loss: 2.484148159122435, Accuracy: 42.20429992675781%, top5: 73.65591430664062%
+	Epoch 300:
+
+	Epoch 400:
+
+	Epoch 500:
+
+Dropout 0.6:
+	Epoch 100:
+
+	Epoch 200:
+
+	Epoch 300:
+
+	Epoch 400:
+
+	Epoch 500:
+
+Dropout 0.8:
+	Epoch 100:
+                     Training: Total batch: [1385], Loss:1.3504705237231152, Accuracy: top1: 63.337181091308594%, top5: 85.52251434326172% 
+                     Validation: batch size:[595], Loss: 2.5164186785908877, Accuracy: 40.154571533203125%, top5: 70.86693572998047%
+	Epoch 200:
+
+	Epoch 300:
+
+	Epoch 400:
+
+	Epoch 500:
