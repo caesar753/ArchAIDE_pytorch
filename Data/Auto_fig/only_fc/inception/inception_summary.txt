@@ -18,10 +18,14 @@ Dropout 0.2:
                      Training: Total batch: [1385], Loss:0.8387041532502544, Accuracy: top1: 78.00231170654297%, top5: 90.94976806640625% 
                      Validation: batch size:[595], Loss: 2.523608681753338, Accuracy: 43.413978576660156%, top5: 72.7486572265625%
 	Epoch 300:
-
+                     Training: Total batch: [1385], Loss:0.7839624924272945, Accuracy: top1: 79.93648529052734%, top5: 91.13741302490234% 
+                     Validation: batch size:[595], Loss: 2.4765004856669672, Accuracy: 43.34677505493164%, top5: 74.09274291992188%
 	Epoch 400:
-
+                     Training: Total batch: [1385], Loss:0.7372910802628454, Accuracy: top1: 81.04792022705078%, top5: 91.48383331298828% 
+                     Validation: batch size:[595], Loss: 2.478367213653626, Accuracy: 44.05241775512695%, top5: 74.69757843017578%
 	Epoch 500:
+                     Training: Total batch: [1385], Loss:0.7231910545965705, Accuracy: top1: 81.3221664428711%, top5: 91.20958709716797% 
+                     Validation: batch size:[595], Loss: 2.4718843269116815, Accuracy: 44.287635803222656%, top5: 74.59677124023438%
 
 Dropout 0.4:
 	Epoch 100:
@@ -57,7 +61,7 @@ Dropout 0.8:
 	Epoch 100:
                      Training: Total batch: [1385], Loss:1.3504705237231152, Accuracy: top1: 63.337181091308594%, top5: 85.52251434326172% 
                      Validation: batch size:[595], Loss: 2.5164186785908877, Accuracy: 40.154571533203125%, top5: 70.86693572998047%
-	Epoch 200:
+	Epoch 200: ON CNR-LAB2
 
 	Epoch 300:
 

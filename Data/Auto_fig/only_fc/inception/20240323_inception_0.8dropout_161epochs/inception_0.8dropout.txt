@@ -221,3 +221,5 @@ Parameter Group 0
 ) 
                      Training: Total batch: [1385], Loss:1.1429252806409986, Accuracy: top1: 69.11085510253906%, top5: 88.16397094726562% 
                      Validation: batch size:[595], Loss: 2.5768076535514606, Accuracy: 40.725807189941406%, top5: 71.67338562011719%
+
+ON CNR_LAB2 
