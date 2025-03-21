@@ -26,11 +26,14 @@ Dropout0.2:
 
 Dropout0.4:
 	Epoch 300:                    
-
+                     Training: Total batch: [1385], Loss:0.3378810995219845, Accuracy: top1: 90.9208984375%, top5: 95.17898559570312% 
+                     Validation: batch size:[595], Loss: 1.698098036938733, Accuracy: 70.5981216430664%, top5: 90.08736419677734%
 	Epoch 400:
-                    
+                     Training: Total batch: [1385], Loss:0.31506139396369404, Accuracy: top1: 91.65704345703125%, top5: 95.20785522460938% 
+                     Validation: batch size:[595], Loss: 1.7334109122903387, Accuracy: 70.69892120361328%, top5: 91.09542846679688%                    
 	Epoch 500:
-
+                     Training: Total batch: [1385], Loss:0.26733505572683447, Accuracy: top1: 92.8550796508789%, top5: 95.61200714111328% 
+                     Validation: batch size:[595], Loss: 2.1127767290368613, Accuracy: 71.40457153320312%, top5: 91.26344299316406%
 
 ###############################
 
