@@ -1,0 +1,65 @@
+Summary: Neural Network:inception_v3,                     batch:5, learning rate: 0.001, Intermediate features: 1024,
+			trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+			optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.001
+    lr: 0.00059049
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+
+Dropout0.2:
+	Epoch 300:                    
+                     
+	Epoch 400:
+
+	Epoch 500:
+			
+
+###############################
+
+Dropout0.4:
+	Epoch 300:                    
+                     Training: Total batch: [1385], Loss:0.42616819994999633, Accuracy: top1: 88.94341278076172%, top5: 93.79330444335938% 
+                     Validation: batch size:[595], Loss: 2.7979954828354527, Accuracy: 57.86289978027344%, top5: 83.66934967041016% 
+	Epoch 400:
+		     Training: Total batch: [1385], Loss:0.3502379826795125, Accuracy: top1: 90.76212310791016%, top5: 95.04907989501953% 
+                     Validation: batch size:[595], Loss: 2.9411883715628226, Accuracy: 58.904571533203125%, top5: 83.80376434326172%
+	Epoch 500:
+		     Training: Total batch: [1385], Loss:0.3036244824887796, Accuracy: top1: 91.78694915771484%, top5: 95.42436218261719% 
+                     Validation: batch size:[595], Loss: 2.9233226108169306, Accuracy: 58.70295715332031%, top5: 84.94623565673828%
+
+###############################
+
+
+Dropout0.6:
+	Epoch 300:                    
+                     Training: Total batch: [1385], Loss:0.4534173295609524, Accuracy: top1: 88.03406524658203%, top5: 93.79330444335938% 
+                     Validation: batch size:[595], Loss: 2.5593796702067704, Accuracy: 57.79569625854492%, top5: 83.29972839355469%   
+	Epoch 400:
+		     Training: Total batch: [1385], Loss:0.37469014113672816, Accuracy: top1: 90.04041290283203%, top5: 94.2696304321289% 
+                     Validation: batch size:[595], Loss: 2.805759169184302, Accuracy: 59.34139633178711%, top5: 84.13978576660156%
+	Epoch 500:
+                     Training: Total batch: [1385], Loss:0.3418016670480064, Accuracy: top1: 90.70438385009766%, top5: 94.83256530761719% 
+                     Validation: batch size:[595], Loss: 2.7756525329444437, Accuracy: 60.65188217163086%, top5: 84.94623565673828%	
+
+###############################
+
+	
+Dropout0.8:
+	Epoch 300:                    
+                     Training: Total batch: [1385], Loss:0.4894318348567936, Accuracy: top1: 86.74942016601562%, top5: 93.3458480834961% 
+                     Validation: batch size:[595], Loss: 2.6020625633913936, Accuracy: 57.022850036621094%, top5: 83.16532135009766%
+	Epoch 400:
+		     Training: Total batch: [1385], Loss:0.40311730124911255, Accuracy: top1: 89.46305084228516%, top5: 94.16859436035156% 
+                     Validation: batch size:[595], Loss: 2.79141189566245, Accuracy: 58.87096405029297%, top5: 84.03897857666016%
+	Epoch 500:
+                     Training: Total batch: [1385], Loss:0.37373378430873844, Accuracy: top1: 89.99711608886719%, top5: 94.22632598876953% 
+                     Validation: batch size:[595], Loss: 2.8717737492978648, Accuracy: 59.17338562011719%, top5: 84.17338562011719%	
+
+###############################
+
+	
