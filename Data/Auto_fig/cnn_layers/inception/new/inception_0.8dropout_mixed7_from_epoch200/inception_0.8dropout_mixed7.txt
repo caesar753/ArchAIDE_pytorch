@@ -1,0 +1,557 @@
+Summary: Neural Network:inception_v3,                     epochs:210,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 0.0003486784401
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:1.3383760944564824, Accuracy: top1: 62.38452911376953%, top5: 85.49364471435547% 
+                     Validation: batch size:[595], Loss: 1.9717730323769032, Accuracy: 50.2352180480957%, top5: 80.00672149658203%
+ 
+Summary: Neural Network:inception_v3,                     epochs:220,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 0.00031381059609000004
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.9082197617948409, Accuracy: top1: 74.68244934082031%, top5: 90.50231170654297% 
+                     Validation: batch size:[595], Loss: 2.008818647915764, Accuracy: 54.23387145996094%, top5: 82.76210021972656%
+ 
+Summary: Neural Network:inception_v3,                     epochs:230,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 0.00031381059609000004
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.7496220826162903, Accuracy: top1: 79.27251434326172%, top5: 91.18071746826172% 
+                     Validation: batch size:[595], Loss: 2.14104107655771, Accuracy: 55.779571533203125%, top5: 82.99730682373047%
+ 
+Summary: Neural Network:inception_v3,                     epochs:240,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 0.00028242953648100003
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.6217128245683575, Accuracy: top1: 83.38626098632812%, top5: 92.53752899169922% 
+                     Validation: batch size:[595], Loss: 2.3767766194152147, Accuracy: 55.20833206176758%, top5: 82.66128540039062%
+ 
+Summary: Neural Network:inception_v3,                     epochs:250,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 0.00028242953648100003
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.5769615456615617, Accuracy: top1: 84.51212310791016%, top5: 92.66743469238281% 
+                     Validation: batch size:[595], Loss: 2.288901232124459, Accuracy: 56.11559295654297%, top5: 83.46774291992188%
+ 
+Summary: Neural Network:inception_v3,                     epochs:260,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 0.00025418658283290005
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.548407757513826, Accuracy: top1: 85.49364471435547%, top5: 92.9705581665039% 
+                     Validation: batch size:[595], Loss: 2.4931612081711667, Accuracy: 55.376346588134766%, top5: 82.56048583984375%
+ 
+Summary: Neural Network:inception_v3,                     epochs:270,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 0.00025418658283290005
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.5316548087510252, Accuracy: top1: 85.6812973022461%, top5: 92.8550796508789% 
+                     Validation: batch size:[595], Loss: 2.44645955554323, Accuracy: 57.493282318115234%, top5: 83.4005355834961%
+ 
+Summary: Neural Network:inception_v3,                     epochs:280,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 0.00022876792454961005
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.5160345885280269, Accuracy: top1: 86.0277099609375%, top5: 93.6778335571289% 
+                     Validation: batch size:[595], Loss: 2.558348232076926, Accuracy: 56.21639633178711%, top5: 83.36693572998047%
+ 
+Summary: Neural Network:inception_v3,                     epochs:290,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 0.00022876792454961005
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.4909988760248082, Accuracy: top1: 86.7349853515625%, top5: 93.6200942993164% 
+                     Validation: batch size:[595], Loss: 2.49179793135876, Accuracy: 57.56048583984375%, top5: 83.16532135009766%
+ 
+Summary: Neural Network:inception_v3,                     epochs:300,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 0.00020589113209464906
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.4894318348567936, Accuracy: top1: 86.74942016601562%, top5: 93.3458480834961% 
+                     Validation: batch size:[595], Loss: 2.6020625633913936, Accuracy: 57.022850036621094%, top5: 83.16532135009766%
+ 
+Summary: Neural Network:inception_v3,                     epochs:310,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 0.00020589113209464906
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.4590407382995077, Accuracy: top1: 87.71651458740234%, top5: 93.85103607177734% 
+                     Validation: batch size:[595], Loss: 2.4830034866078057, Accuracy: 56.38440704345703%, top5: 83.53494262695312%
+ 
+Summary: Neural Network:inception_v3,                     epochs:320,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 0.00018530201888518417
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.4498079323889533, Accuracy: top1: 88.0773696899414%, top5: 93.79330444335938% 
+                     Validation: batch size:[595], Loss: 2.5180528296975635, Accuracy: 57.190860748291016%, top5: 83.63574981689453%
+ 
+Summary: Neural Network:inception_v3,                     epochs:330,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 0.00018530201888518417
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.44870765046958117, Accuracy: top1: 88.207275390625%, top5: 93.95207977294922% 
+                     Validation: batch size:[595], Loss: 2.5761020528706498, Accuracy: 56.9892463684082%, top5: 83.06451416015625%
+ 
+Summary: Neural Network:inception_v3,                     epochs:340,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 0.00016677181699666576
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.4339406161953246, Accuracy: top1: 88.40935516357422%, top5: 93.90877532958984% 
+                     Validation: batch size:[595], Loss: 2.569053217791299, Accuracy: 57.29166793823242%, top5: 83.5013427734375%
+ 
+Summary: Neural Network:inception_v3,                     epochs:350,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 0.00016677181699666576
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.4081683756775077, Accuracy: top1: 89.01559448242188%, top5: 94.3273696899414% 
+                     Validation: batch size:[595], Loss: 2.7435035930267535, Accuracy: 57.627689361572266%, top5: 83.66934967041016%
+ 
+Summary: Neural Network:inception_v3,                     epochs:360,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 0.0001500946352969992
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.4040182933984856, Accuracy: top1: 89.20323181152344%, top5: 94.16859436035156% 
+                     Validation: batch size:[595], Loss: 2.732943976721827, Accuracy: 57.76210021972656%, top5: 83.97177124023438%
+ 
+Summary: Neural Network:inception_v3,                     epochs:370,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 0.0001500946352969992
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.4329911095829462, Accuracy: top1: 88.40935516357422%, top5: 93.8077392578125% 
+                     Validation: batch size:[595], Loss: 2.610743527811623, Accuracy: 58.534942626953125%, top5: 84.24059295654297%
+ 
+Summary: Neural Network:inception_v3,                     epochs:380,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 0.0001350851717672993
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.40052160780302437, Accuracy: top1: 89.33313751220703%, top5: 94.457275390625% 
+                     Validation: batch size:[595], Loss: 2.8100004249414483, Accuracy: 57.86289978027344%, top5: 83.70295715332031%
+ 
+Summary: Neural Network:inception_v3,                     epochs:390,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 0.0001350851717672993
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.40078486533416635, Accuracy: top1: 89.17436218261719%, top5: 94.24076080322266% 
+                     Validation: batch size:[595], Loss: 2.7207850475753865, Accuracy: 57.56048583984375%, top5: 84.07257843017578%
+ 
+Summary: Neural Network:inception_v3,                     epochs:400,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 0.00012157665459056936
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.40311730124911255, Accuracy: top1: 89.46305084228516%, top5: 94.16859436035156% 
+                     Validation: batch size:[595], Loss: 2.79141189566245, Accuracy: 58.87096405029297%, top5: 84.03897857666016%
+ 
+Summary: Neural Network:inception_v3,                     epochs:410,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 0.00012157665459056936
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.37621298441567025, Accuracy: top1: 89.83834075927734%, top5: 94.76039123535156% 
+                     Validation: batch size:[595], Loss: 2.734613728674528, Accuracy: 58.97177505493164%, top5: 84.24059295654297%
+ 
+Summary: Neural Network:inception_v3,                     epochs:420,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 0.00010941898913151243
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.4038195842034133, Accuracy: top1: 89.39087677001953%, top5: 94.25519561767578% 
+                     Validation: batch size:[595], Loss: 2.689361213965992, Accuracy: 58.33333206176758%, top5: 84.03897857666016%
+ 
+Summary: Neural Network:inception_v3,                     epochs:430,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 0.00010941898913151243
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.37644107415783296, Accuracy: top1: 89.95381164550781%, top5: 94.83256530761719% 
+                     Validation: batch size:[595], Loss: 2.8283835244716804, Accuracy: 57.896507263183594%, top5: 84.34139251708984%
+ 
+Summary: Neural Network:inception_v3,                     epochs:440,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 9.847709021836118e-05
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.3596644329018717, Accuracy: top1: 90.34353637695312%, top5: 94.5294418334961% 
+                     Validation: batch size:[595], Loss: 2.9117451881506136, Accuracy: 57.728492736816406%, top5: 83.70295715332031%
+ 
+Summary: Neural Network:inception_v3,                     epochs:450,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 9.847709021836118e-05
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.37359348275363646, Accuracy: top1: 90.09815216064453%, top5: 94.22632598876953% 
+                     Validation: batch size:[595], Loss: 2.7066175294705355, Accuracy: 58.534942626953125%, top5: 83.90457153320312%
+ 
+Summary: Neural Network:inception_v3,                     epochs:460,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 8.862938119652506e-05
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.3688248012076214, Accuracy: top1: 90.43013763427734%, top5: 94.37066650390625% 
+                     Validation: batch size:[595], Loss: 2.8088123787287604, Accuracy: 57.69489288330078%, top5: 84.07257843017578%
+ 
+Summary: Neural Network:inception_v3,                     epochs:470,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 8.862938119652506e-05
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.3642307976609468, Accuracy: top1: 90.37239837646484%, top5: 94.5150146484375% 
+                     Validation: batch size:[595], Loss: 2.788578032434866, Accuracy: 58.87096405029297%, top5: 84.30779266357422%
+ 
+Summary: Neural Network:inception_v3,                     epochs:480,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 7.976644307687256e-05
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.37163435020255275, Accuracy: top1: 89.95381164550781%, top5: 94.61605072021484% 
+                     Validation: batch size:[595], Loss: 2.8535532588603094, Accuracy: 58.501346588134766%, top5: 84.34139251708984%
+ 
+Summary: Neural Network:inception_v3,                     epochs:490,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 7.976644307687256e-05
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.3685037751216751, Accuracy: top1: 90.01155090332031%, top5: 94.61605072021484% 
+                     Validation: batch size:[595], Loss: 2.8751965882765553, Accuracy: 58.66935348510742%, top5: 83.83736419677734%
+ 
+Summary: Neural Network:inception_v3,                     epochs:500,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 7.17897987691853e-05
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.37373378430873844, Accuracy: top1: 89.99711608886719%, top5: 94.22632598876953% 
+                     Validation: batch size:[595], Loss: 2.8717737492978648, Accuracy: 59.17338562011719%, top5: 84.17338562011719%
+ 
+Summary: Neural Network:inception_v3,                     epochs:500,batch:5, learning rate: 0.001, Intermediate features: 1024, Dropout:0.8,
+                     trained_layers: ['Mixed_7a.branch3x3_1.conv.weight', 'Mixed_7a.branch3x3_1.bn.weight', 'Mixed_7a.branch3x3_1.bn.bias', 'Mixed_7a.branch3x3_2.conv.weight', 'Mixed_7a.branch3x3_2.bn.weight', 'Mixed_7a.branch3x3_2.bn.bias', 'Mixed_7a.branch7x7x3_1.conv.weight', 'Mixed_7a.branch7x7x3_1.bn.weight', 'Mixed_7a.branch7x7x3_1.bn.bias', 'Mixed_7a.branch7x7x3_2.conv.weight', 'Mixed_7a.branch7x7x3_2.bn.weight', 'Mixed_7a.branch7x7x3_2.bn.bias', 'Mixed_7a.branch7x7x3_3.conv.weight', 'Mixed_7a.branch7x7x3_3.bn.weight', 'Mixed_7a.branch7x7x3_3.bn.bias', 'Mixed_7a.branch7x7x3_4.conv.weight', 'Mixed_7a.branch7x7x3_4.bn.weight', 'Mixed_7a.branch7x7x3_4.bn.bias', 'Mixed_7b.branch1x1.conv.weight', 'Mixed_7b.branch1x1.bn.weight', 'Mixed_7b.branch1x1.bn.bias', 'Mixed_7b.branch3x3_1.conv.weight', 'Mixed_7b.branch3x3_1.bn.weight', 'Mixed_7b.branch3x3_1.bn.bias', 'Mixed_7b.branch3x3_2a.conv.weight', 'Mixed_7b.branch3x3_2a.bn.weight', 'Mixed_7b.branch3x3_2a.bn.bias', 'Mixed_7b.branch3x3_2b.conv.weight', 'Mixed_7b.branch3x3_2b.bn.weight', 'Mixed_7b.branch3x3_2b.bn.bias', 'Mixed_7b.branch3x3dbl_1.conv.weight', 'Mixed_7b.branch3x3dbl_1.bn.weight', 'Mixed_7b.branch3x3dbl_1.bn.bias', 'Mixed_7b.branch3x3dbl_2.conv.weight', 'Mixed_7b.branch3x3dbl_2.bn.weight', 'Mixed_7b.branch3x3dbl_2.bn.bias', 'Mixed_7b.branch3x3dbl_3a.conv.weight', 'Mixed_7b.branch3x3dbl_3a.bn.weight', 'Mixed_7b.branch3x3dbl_3a.bn.bias', 'Mixed_7b.branch3x3dbl_3b.conv.weight', 'Mixed_7b.branch3x3dbl_3b.bn.weight', 'Mixed_7b.branch3x3dbl_3b.bn.bias', 'Mixed_7b.branch_pool.conv.weight', 'Mixed_7b.branch_pool.bn.weight', 'Mixed_7b.branch_pool.bn.bias', 'Mixed_7c.branch1x1.conv.weight', 'Mixed_7c.branch1x1.bn.weight', 'Mixed_7c.branch1x1.bn.bias', 'Mixed_7c.branch3x3_1.conv.weight', 'Mixed_7c.branch3x3_1.bn.weight', 'Mixed_7c.branch3x3_1.bn.bias', 'Mixed_7c.branch3x3_2a.conv.weight', 'Mixed_7c.branch3x3_2a.bn.weight', 'Mixed_7c.branch3x3_2a.bn.bias', 'Mixed_7c.branch3x3_2b.conv.weight', 'Mixed_7c.branch3x3_2b.bn.weight', 'Mixed_7c.branch3x3_2b.bn.bias', 'Mixed_7c.branch3x3dbl_1.conv.weight', 'Mixed_7c.branch3x3dbl_1.bn.weight', 'Mixed_7c.branch3x3dbl_1.bn.bias', 'Mixed_7c.branch3x3dbl_2.conv.weight', 'Mixed_7c.branch3x3dbl_2.bn.weight', 'Mixed_7c.branch3x3dbl_2.bn.bias', 'Mixed_7c.branch3x3dbl_3a.conv.weight', 'Mixed_7c.branch3x3dbl_3a.bn.weight', 'Mixed_7c.branch3x3dbl_3a.bn.bias', 'Mixed_7c.branch3x3dbl_3b.conv.weight', 'Mixed_7c.branch3x3dbl_3b.bn.weight', 'Mixed_7c.branch3x3dbl_3b.bn.bias', 'Mixed_7c.branch_pool.conv.weight', 'Mixed_7c.branch_pool.bn.weight', 'Mixed_7c.branch_pool.bn.bias', 'fc.1.weight', 'fc.1.bias', 'fc.4.weight', 'fc.4.bias']
+                     optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: False
+    initial_lr: 0.001
+    lr: 7.17897987691853e-05
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) 
+                     Training: Total batch: [1385], Loss:0.37373378430873844, Accuracy: top1: 89.99711608886719%, top5: 94.22632598876953% 
+                     Validation: batch size:[595], Loss: 2.8717737492978648, Accuracy: 59.17338562011719%, top5: 84.17338562011719%
