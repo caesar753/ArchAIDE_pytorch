@@ -13,11 +13,14 @@ Parameter Group 0
 
 Dropout0.2:
 	Epoch 300:                    
-                     
+                     Training: Total batch: [1385], Loss:0.43388408226769437, Accuracy: top1: 88.38048553466797%, top5: 93.77886962890625% 
+                     Validation: batch size:[595], Loss: 2.8889929762292246, Accuracy: 55.24193572998047%, top5: 81.45161437988281%                     
 	Epoch 400:
-
+                     Training: Total batch: [1385], Loss:0.37907886404747965, Accuracy: top1: 89.63626098632812%, top5: 94.3273696899414% 
+                     Validation: batch size:[595], Loss: 3.0952487464726075, Accuracy: 57.090057373046875%, top5: 83.70295715332031%
 	Epoch 500:
-			
+                     Training: Total batch: [1385], Loss:0.35971930516492523, Accuracy: top1: 90.61778259277344%, top5: 94.1541519165039% 
+                     Validation: batch size:[595], Loss: 3.246816770228158, Accuracy: 58.904571533203125%, top5: 83.6021499633789%			
 
 ###############################
 
