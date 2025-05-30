@@ -190,21 +190,23 @@ def save_checkpoint(model, model_trained, drop, epoch, num_epochs, batch, optim_
                 'loss': val_epoch_loss,
                 }, save_path)
 
-def load_checkpoint( model_load):
+def load_checkpoint(model_load,checkpoint_name):
     # model = Net()
     # optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
 
-    model_saved = input("enter the name of the saved checkpoint \n")
+    # model_saved = input("enter the name of the saved checkpoint \n")
     # checkpoint = torch.load("F:\ArchAIDE_nn\Archapp_pytorch\Trained_models\Checkpoints\\" + model_saved)
     
     if os.name == 'nt':
-        checkpoint = torch.load("..\\..\\Data\\Trained_models\\Checkpoints\\" + model_saved)
+        checkpoint = torch.load("..\\..\\Data\\Trained_models\\Checkpoints\\" + checkpoint_name, weights_only=False)
+        input()
     elif os.name == 'posix':
-        checkpoint = torch.load("../../Data/Trained_models/Checkpoints/" + model_saved)
-
+        checkpoint = torch.load("../../Data/Trained_models/Checkpoints/" + checkpoint_name, weights_only=False)
+        input()
 
     model_load.load_state_dict(checkpoint['model_state_dict'])
     optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+    
     epoch_save = checkpoint['epoch'] + 1
     cost_save = checkpoint['loss']
 
@@ -237,10 +239,6 @@ if __name__ == '__main__':
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     device
     print(device)
-
-    ##ELISA
-    torch.cuda.empty_cache() #to empty cuda cache
-    print(torch.cuda.memory_summary(device=None, abbreviated=False)) #memory summary
 
     #choosing model 
     model_down = input("Which model?")
@@ -418,9 +416,10 @@ if __name__ == '__main__':
     load_or_new = input("Do you want to [L]oad a checkpoint or to train a [N]ew model? (L/N) \n")
 
     if load_or_new == "L":
-        epoch_save, cost = load_checkpoint(model)
-    else:
-        pass
+        checkpoint = input("Please enter the name of the checkpoint \n")
+        epoch_save, cost = load_checkpoint(model, checkpoint)
+    # else:
+    #     pass
 
     k = input("Insert the top score for results \n")
     k = int(k)
