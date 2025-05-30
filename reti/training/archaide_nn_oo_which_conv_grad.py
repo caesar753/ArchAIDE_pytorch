@@ -190,7 +190,7 @@ def save_checkpoint(model, model_trained, drop, epoch, num_epochs, batch, optim_
                 'loss': val_epoch_loss,
                 }, save_path)
 
-def load_checkpoint(model_load,checkpoint_name):
+def load_checkpoint(model_load,checkpoint_name, dev):
     # model = Net()
     # optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
 
@@ -198,11 +198,10 @@ def load_checkpoint(model_load,checkpoint_name):
     # checkpoint = torch.load("F:\ArchAIDE_nn\Archapp_pytorch\Trained_models\Checkpoints\\" + model_saved)
     
     if os.name == 'nt':
-        checkpoint = torch.load("..\\..\\Data\\Trained_models\\Checkpoints\\" + checkpoint_name, weights_only=False)
-        input()
+        checkpoint = torch.load("..\\..\\Data\\Trained_models\\Checkpoints\\" + checkpoint_name, map_location = dev)
     elif os.name == 'posix':
-        checkpoint = torch.load("../../Data/Trained_models/Checkpoints/" + checkpoint_name, weights_only=False)
-        input()
+        checkpoint = torch.load("../../Data/Trained_models/Checkpoints/" + checkpoint_name, map_location = dev)
+
 
     model_load.load_state_dict(checkpoint['model_state_dict'])
     optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
@@ -234,9 +233,14 @@ def summary(model_str, epoch, batch, lr, inter_feat, drop, optim,\
 
 if __name__ == '__main__':
     os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
-
+    
+    gpu_nr = input("which gpu?")
+    gpu_string = "cuda:" + gpu_nr
+    gpu_nr = int(gpu_nr)
+    torch.cuda.set_device(gpu_nr)
     #defining device
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    
+    device = torch.device(gpu_string if torch.cuda.is_available() else "cpu")
     device
     print(device)
 
@@ -321,7 +325,7 @@ if __name__ == '__main__':
     model = torch.hub.load('pytorch/vision:v0.10.0', model_down, weights='DEFAULT', force_reload=True)
 
     #loading the model
-    model
+    model.to(device)
     print(model)
 
     #set aux_logist to False if in transformation function I'm not setting image size >= (299x299), if so I can set it to True
@@ -336,7 +340,7 @@ if __name__ == '__main__':
     #intfeat = 20
     intfeat = input("Please enter an intermediate feature value (integer):\n")
     intfeat = int(intfeat)
-
+    
     for parameter in model.parameters():
         parameter.requires_grad = False
 
@@ -366,9 +370,9 @@ if __name__ == '__main__':
 
     #if you want to use cuda uncomment this line
     if torch.cuda.is_available():
-        model = model.cuda()
+        model = model.cuda(gpu_nr)
         model = model.to(device)
-    print(model.fc)
+    #print(model.fc)
     
     layer_names = []
     print("These layers will be trained: \n")
@@ -409,7 +413,7 @@ if __name__ == '__main__':
     #num_epochs = 10
 
     #setting loss function, for now CrossEntropy
-    loss = nn.CrossEntropyLoss()
+    loss = nn.CrossEntropyLoss().to(device)
     
     epoch_save = 0
 
@@ -417,7 +421,7 @@ if __name__ == '__main__':
 
     if load_or_new == "L":
         checkpoint = input("Please enter the name of the checkpoint \n")
-        epoch_save, cost = load_checkpoint(model, checkpoint)
+        epoch_save, cost = load_checkpoint(model, checkpoint, device)
     # else:
     #     pass
 
@@ -502,7 +506,7 @@ if __name__ == '__main__':
                 #pass data to cuda device
                 batch_images, batch_labels = data
                 if torch.cuda.is_available():
-                    batch_images, batch_labels = batch_images.cuda(), batch_labels.cuda()
+                    batch_images, batch_labels = batch_images.cuda(gpu_nr), batch_labels.cuda(gpu_nr)
 
                 X = batch_images
                 Y = batch_labels
@@ -581,7 +585,7 @@ if __name__ == '__main__':
                 #pass data to cuda device
                 images, labels = data
                 if torch.cuda.is_available():
-                    images, labels = images.cuda(), labels.cuda()
+                    images, labels = images.cuda(gpu_nr), labels.cuda(gpu_nr)
                 
             #   images = images.cuda()
                 outputs = model(images)
@@ -598,7 +602,7 @@ if __name__ == '__main__':
                 #     print(f'Top{k} predicted is: {predictedtop} and ground truth is {labels} \n')
                 
                 total += labels.size(0)
-                correct += (predicted == labels.cuda()).sum()
+                correct += (predicted == labels.cuda(gpu_nr)).sum()
                 correcttop += torch.sum(predictedtop == labels)
                 
                 # print(f'Correct max is {predicted} and ground truth is {labels} \n')
