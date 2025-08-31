@@ -234,15 +234,21 @@ def summary(model_str, epoch, batch, lr, inter_feat, drop, optim,\
 if __name__ == '__main__':
     os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
     
-    gpu_nr = input("which gpu?")
-    gpu_string = "cuda:" + gpu_nr
-    gpu_nr = int(gpu_nr)
-    torch.cuda.set_device(gpu_nr)
-    #defining device
+    if torch.cuda.device_count() > 1:
+        gpu_nr = input("which gpu?")
+        gpu_string = "cuda:" + gpu_nr
+        gpu_nr = int(gpu_nr)
+        torch.cuda.set_device(gpu_nr)
     
-    device = torch.device(gpu_string if torch.cuda.is_available() else "cpu")
-    device
-    print(device)
+        #defining device
+        device = torch.device(gpu_string if torch.cuda.is_available() else "cpu")
+        device
+        # print(device)
+    else:
+        gpu_nr = 0
+        device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        device
+        # print(device)
 
     #choosing model 
     model_down = input("Which model?")
