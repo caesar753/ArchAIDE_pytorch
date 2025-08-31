@@ -22,10 +22,10 @@ To launch the training of a neural network you can launch these commands
 
 ```
 cd reti/training/
-python3 archaide_nn_oo.py
+python3 ArchAIDE_training.py
 ```
 
-In the shell you will be asked some questions (which NN? which optimizer? how much dropout? how many epochs? and so on)
+In the shell you will be asked some questions (*which GPU to use if there are multiple GPUs on the machine? which neural network? which optimizer? how much dropout? how many epochs?* and so on).
 
 Then the training will start.
 
@@ -39,5 +39,5 @@ To try inference of a trained neural network you can launch these commands
 
 ```
 cd reti/
-python3 inference.py
+python3 ArchAIDE_inference.py
 ```
